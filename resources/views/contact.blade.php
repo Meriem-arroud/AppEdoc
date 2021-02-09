@@ -8,9 +8,12 @@
 </head>
 <body>
 <form action='contact' method='post'>
-
-
+    @csrf
+  Email: <input type="text" name="email" /></br>
+  Subject : <input type="text" name="subject" /></br>
+  Message : <input type="text" name="message" /></br>
+  <input type="submit" name="envoyer" />
 </form>
-  
+
 </body>
 </html>

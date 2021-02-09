@@ -1,19 +1,22 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use \App\Mail\SendMail;
 class Mailcontroller extends Controller
 {
-    public function mailsend()
+
+    public function contact(){
+        return view('contact');
+    }
+    public function mailsend(Request $request)
     {
         $details = [
-            'title' => 'Mail from Smac edoc',
-            'body' => 'Message'
+            'title' =>  $request->input('subject'),
+            'body' => $request->input('message')
         ];
 
-        \Mail::to('arroudmeriem@gmail.com')->send(new SendMail($details));
+        \Mail::to( $request->input('email'))->send(new SendMail($details));
         return view('emails.thanks');
     }
 }

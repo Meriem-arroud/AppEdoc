@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Mailcontroller;
+use App\Http\Controllers\SendEmailController;
 use App\Mail\SendMail;
 
 /*
@@ -20,7 +21,6 @@ use App\Mail\SendMail;
 */
 
 
-
 Route::view("master",'master');
 Route::view("about",'about');
 
@@ -30,3 +30,6 @@ Route::view("about",'about');
 });*/
 
 Route::get('/send-mail',[Mailcontroller::class,'mailsend']);
+
+Route::get('/contact',[Mailcontroller::class,'contact']);
+Route::post('/contact',[Mailcontroller::class,'mailsend']);
