@@ -30,6 +30,10 @@ class SendMail extends Mailable
      */
      public function build()
     {
-        return $this->subject('Mail from Smac Edoc')->view('emails.sendmail');
+        return $this->subject('Mail from Smac Edoc')
+                    ->view('emails.sendmail')
+                    ->attach($this->details['file']->getRealPath(),[
+               'as' => $this->details['file']->getClientOriginalName()
+       ]);
     }
 }

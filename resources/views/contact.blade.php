@@ -7,13 +7,14 @@
   <title>Document</title>
 </head>
 <body>
-<form action='contact' method='post'>
+<form action='contact' method='post' enctype="multipart/form-data">
     @csrf
   Email: <input type="text" name="email" /></br>
   Subject : <input type="text" name="subject" /></br>
   Message : <input type="text" name="message" /></br>
-  <input type="submit" name="envoyer" />
-</form>
+  <input type="file" name="docx"/></br>
+  <button type="submit">Envoyee</button>
 
+</form>
 </body>
 </html>

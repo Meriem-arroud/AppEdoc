@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Mail\SendMail;
+use Mail;
 class Mailcontroller extends Controller
 {
+
+    public function upload(Request $request){
+        return $request->file('file')->store('docs');
+    }
 
     public function contact(){
         return view('contact');
@@ -12,11 +17,12 @@ class Mailcontroller extends Controller
     public function mailsend(Request $request)
     {
         $details = [
-            'title' =>  $request->input('subject'),
-            'body' => $request->input('message')
+            'subject' =>  $request->input('subject'),
+            'message' => $request->input('message'),
+            'email' => $request->input('email'),
+            'file' =>$request->file('docx')
         ];
-
-        \Mail::to( $request->input('email'))->send(new SendMail($details));
+        \Mail::to($details["email"])->send(new \App\Mail\SendMail($details));
         return view('emails.thanks');
     }
 }
