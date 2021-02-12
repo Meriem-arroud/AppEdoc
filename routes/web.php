@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Mailcontroller;
-use App\Http\Controllers\SendEmailController;
+use App\Http\Controllers\SignatureController;
 use App\Mail\SendMail;
 
 /*
@@ -18,3 +18,6 @@ use App\Mail\SendMail;
 
 Route::get('/contact',[Mailcontroller::class,'contact']);
 Route::post('/contact',[Mailcontroller::class,'mailsend']);
+
+Route::get('/signer',[SignatureController::class,'signatureview']);
+Route::post('/signer',[SignatureController::class,'signer']);
