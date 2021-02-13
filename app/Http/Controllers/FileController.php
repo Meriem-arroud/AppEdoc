@@ -54,21 +54,16 @@ class FileController extends Controller
         
        
         function get(){
-           // $downoald=DB::table('fichiers')->get();
+           
            if (DB::table('fichiers')->where('departement', session('user')->département)->exists()) {
-            //   return session('user')->département;
+            
            $downoald = DB::table('fichiers')->where('departement', session('user')->département)->get();
             
             return view('principal',compact('downoald'));
          
         }
            
-        //foreach ($downoald as $f) {
-         //    $f->file;}
-                
-
-               // $file='uploadedfile/1612873206.pdf' ; 
-        // return Response()->download($file);
+    
             }
            
            
@@ -79,12 +74,6 @@ class FileController extends Controller
     
           header('Content-type: application/pdf');
          readfile('uploadedfile/'. $fichier);
-        
-
-           // return view('vue',compact('fichier'));
-           
-           
-          //echo '<iframe src="uploadedfile/"'.$file.'"></iframe>' ;
         }
     
     
