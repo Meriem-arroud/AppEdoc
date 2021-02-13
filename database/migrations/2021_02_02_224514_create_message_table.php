@@ -4,18 +4,17 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFileTable extends Migration
+class CreateMessageTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
+    public function up()// for create a table
     {
-        Schema::create('file', function (Blueprint $table) {
+        Schema::create('message', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('file')->nullable();
             $table->timestamps();
         });
     }
@@ -25,8 +24,8 @@ class CreateFileTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down()// for delete a table
     {
-        Schema::dropIfExists('file');
+        Schema::dropIfExists('message');
     }
 }
