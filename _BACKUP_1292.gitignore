@@ -5,9 +5,13 @@
 /vendor
 .env
 .env.backup
+.phpunit.result.cache
 docker-compose.override.yml
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+<<<<<<< HEAD
+=======
 *.orig
+>>>>>>> b40751046d500cc9216bb1146d1c19ae725f06c7
