@@ -14,7 +14,9 @@ class UserController extends Controller
 
         if( !$user || !Hash::check($req->pass,$user->password)){
 
-            return'password or email not matched';
+           // return'password or email not matched';
+           $status="error";
+           return view('login',compact('status'));
         }else{
 
             $req->session()->put('user',$user);

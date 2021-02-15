@@ -8,7 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\VueController;
-
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +24,9 @@ Route::get('/', function () {
 });
 Route::view('/login', 'login');
 Route::post('/login', [UserController::class,'login']);
-
+Route::view('/loginadmin', 'loginadmin');
+Route::post('/loginadmin', [AdminController::class,'login']);
+Route::view('ProfileAdmin', 'ProfilAdmin');
 Route::view('profile','profile');
 //Route::view('principal','principal');
 
@@ -48,3 +50,4 @@ Route::post('/contact',[Mailcontroller::class,'mailsend']);
 
 Route::get('/signer',[SignatureController::class,'signatureview']);
 Route::post('/signer',[SignatureController::class,'signer']);
+Route::view('experience','experience');

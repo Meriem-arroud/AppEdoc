@@ -10004,6 +10004,24 @@ h3 {
     border-color: #dee2e6;
   }
 }
-background{
-  color:red;
+.invalid{
+  border-color: red;
+}
+#form.invalid input{
+  border-color:red ;
+  background:url(delete.png) ;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y:center;
+  
+
+}
+#form1.invalid input{
+  border-color:red ;
+  background:url(delete.png) ;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y:center;
+  
+
 }

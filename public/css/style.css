@@ -1,0 +1,5 @@
+.form-group[data-error] input{
+    border-color: red;
+    color:red;
+
+}
