@@ -5,6 +5,7 @@ use App\Http\Controllers\Mailcontroller;
 use App\Http\Controllers\SignatureController;
 use App\Mail\SendMail;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\VueController;

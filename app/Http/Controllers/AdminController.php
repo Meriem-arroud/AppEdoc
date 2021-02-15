@@ -17,7 +17,7 @@ class AdminController extends Controller
            return view('loginadmin');
         }else{
 
-            $req->session()->put('admion',  $admin);
+            $req->session()->put('admin',  $admin);
             
 
     return  redirect('ProfileAdmin');
