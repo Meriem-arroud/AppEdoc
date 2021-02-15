@@ -8,7 +8,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\VueController;
-use App\Http\Controllers\AdminController;
+//use App\Notifications\RealTimeMessageNotification;
+//use App\Models\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +19,7 @@ use App\Http\Controllers\AdminController;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-
+|
 */
 Route::get('/', function () {
     return view('welcome');
@@ -45,9 +47,6 @@ Route::get('dar/{file}', [VueController::class,'show']);
 
 Route::get('files/{file}', [FileController::class,'show']);
 
-Route::get('/contact',[Mailcontroller::class,'contact']);
-Route::post('/contact',[Mailcontroller::class,'mailsend']);
-
 Route::get('/signer',[SignatureController::class,'signatureview']);
 Route::post('/signer',[SignatureController::class,'signer']);
-Route::view('experience','experience');
+
