@@ -57,19 +57,19 @@ class RealTimeMessageNotification extends Notification implements ShouldBroadcas
      * @return array
      */
 
-    public function toArray($notifiable)
-{
-    return [
-          //'data' => 'A new user has registered!'
-          'createdUser'->$this->user,
-          'admin'->$notifiable
-    ];
-} 
+//     public function toArray($notifiable)
+// {
+//     return [
+//           //'data' => 'A new user has registered!'
+//           'createdUser'->$this->user,
+//           'admin'->$notifiable
+//     ];
+// } 
 
-    // public function toBroadcast($notifiable)
-    // {
-    //     return new BroadcastMessage ([
-    //         'message' => "$this->message (User $notifiable->name)"
-    //     ]);
-    // }
+//     public function toBroadcast($notifiable)
+//     {
+//         return new BroadcastMessage ([
+//             'message' => "$this->message (User $notifiable->name)"
+//         ]);
+//     }
 }

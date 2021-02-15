@@ -4,9 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Mailcontroller;
 use App\Http\Controllers\SignatureController;
 use App\Mail\SendMail;
-use App\Http\Controllers\Mailcontroller;
-use App\Http\Controllers\SignatureController;
-use App\Mail\SendMail;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\FileController;
@@ -47,11 +44,6 @@ Route::get('getfile', [FileController::class,'get']);
 Route::get('dar/{file}', [VueController::class,'show']);
 
 Route::get('files/{file}', [FileController::class,'show']);
-
-Route::get('/', function () {
-    
-    return view('welcome');
-});
 
 Route::get('/signer',[SignatureController::class,'signatureview']);
 Route::post('/signer',[SignatureController::class,'signer']);
