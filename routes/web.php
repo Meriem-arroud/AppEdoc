@@ -25,6 +25,9 @@ use App\Http\Controllers\VueController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/test', function () {
+    return view('Test');
+});
 Route::view('/login', 'login');
 Route::post('/login', [UserController::class,'login']);
 Route::view('/loginadmin', 'loginadmin');
@@ -48,7 +51,8 @@ Route::get('getfile/search', [FileController::class,'search'])->name('live_searc
 
 Route::get('dar/{file}', [VueController::class,'show']);
 Route::get('files/{file}', [FileController::class,'show']);
-
+Route::get('/contact',[Mailcontroller::class,'contact']);
+Route::post('/contact',[Mailcontroller::class,'mailsend']);
 Route::get('/signer',[SignatureController::class,'signatureview']);
 Route::post('/signer',[SignatureController::class,'signer']);
 

@@ -6,11 +6,6 @@ use \App\Mail\SendMail;
 use Mail;
 class Mailcontroller extends Controller
 {
-
-    public function upload(Request $request){
-        return $request->file('file')->store('docs');
-    }
-
     public function contact(){
         return view('contact');
     }
