@@ -50,4 +50,12 @@ Route::get('files/{file}', [FileController::class,'show']);
 
 Route::get('/signer',[SignatureController::class,'signatureview']);
 Route::post('/signer',[SignatureController::class,'signer']);
+ 
+//***************************************************
+Route::get('getfileAdmin',[FileController::class,'getAdmin']);
+Route::get('results',[FileController::class,'search'])->name('results');
+Route::get('edit/{id_document}', [FileController::class,'editDocument']);
+Route::post('updatefile/{id_document}', [FileController::class,'upDateDocument']);
+Route::get('delete/{id_document}', [FileController::class,'deleteDocument']);
+//***************************************************
 

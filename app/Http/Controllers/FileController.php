@@ -74,6 +74,62 @@ class FileController extends Controller
           header('Content-type: application/pdf');
          readfile('uploadedfile/'. $fichier);
         }
+
+        function getAdmin()
+           {
+            $downoald=DB::table('fichiers')->get();
+    
+            return view('principalAdmin',compact('downoald'));
+            }
+
+        function editDocument($id_document)
+        {
+         $id=fichier::find($id_document);//check if this id exists in database
+         $departement=Departement::select('id','name_departement')->get();
+         $type=Type::select('id','type')->get();
+        if(!$id)
+        return redirect()->back();
+        return view('edit',compact('id','departement','type'));
+         
+        }
+    //********************update document**************************************************
+        function upDateDocument(Request $req,$id_document)
+           {
+            $id=fichier::find($id_document);//check if this id exists in database
+           
+            if(!$id)
+            return redirect()->back();
+            //update data
+            $id->update([
+                'departement'=>$req->depart,
+                'name'=>$req->name,
+            ]);
+          
+            return redirect()->back();
+           }
+     //********************delete document**************************************************
+     function deleteDocument(Request $request,$id_document)
+     {
+      $id=fichier::find($id_document);//check if this id exists in database
+      
+     if(!$id)
+     return redirect()->back();
+
+     $id->delete();
+     return redirect()->back();
+      
+     }   
+     //**************************serach for documents******************************************
+
+     function search()
+     {
+         //$search_text=$req->get('text');
+         //$documents=DB::table('fichiers')->where('name','like','%'.$search_text.'%')->pagination(5);
+         $search_text=$_GET['text'];
+         $documents=fichier::where('name','LIKE','%'.$search_text.'%')->get();
+         return view('searchPage',compact('documents'));
+         
+     }
     
     
 }
