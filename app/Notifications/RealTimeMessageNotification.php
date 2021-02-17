@@ -8,21 +8,21 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Notifications\Messages;
-use App\Models\User;
+use App\Models\fichier;
 
 class RealTimeMessageNotification extends Notification implements ShouldBroadcast
 {
     use Queueable;
-    public $user;
+    public $fichier;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct(fichier $fichier)
     {
-        $this->user = $user;
+        $this->fichier = $fichier;
     }
 
     /**
@@ -57,14 +57,14 @@ class RealTimeMessageNotification extends Notification implements ShouldBroadcas
      * @return array
      */
 
-//     public function toArray($notifiable)
-// {
-//     return [
-//           //'data' => 'A new user has registered!'
-//           'createdUser'->$this->user,
-//           'admin'->$notifiable
-//     ];
-// } 
+    public function toArray($notifiable)
+{
+    return [
+
+          'File Name'=>$this->fichier->name,
+          'Created at'=>$this->fichier->date,
+    ];
+} 
 
 //     public function toBroadcast($notifiable)
 //     {
