@@ -14,26 +14,34 @@ class UserSee extends Seeder
      */
     public function run()
     {
-       DB::table('users')->insert([
-           'nom'=>'mardi',
-           'prenom'=>'youssef',
-           'département'=>'management',
-           'email'=>'y.mardi@gmail.com',
-           'password'=>Hash::make('1234')
-           ]);
-           DB::table('users')->insert([
-            'nom'=>'qadmiri',
-            'prenom'=>'nouhaila',
-            'département'=>'informatique',
-            'email'=>'n.qadmiri@gmail.com',
-            'password'=>Hash::make('5678')
+        DB::table('users')->insert([
+            'nom'=>'saadoune',
+            'prenom'=>'soukaina',
+            'département'=>'management',
+            'email'=>'s.saadoune@gmail.com',
+            'password'=>Hash::make('1234')
             ]);
             DB::table('users')->insert([
-                'nom'=>'moustatir',
-                'prenom'=>'yassine',
-                'département'=>'comptabilité',
-                'email'=>'y.moustatir@gmail.com',
-                'password'=>Hash::make('9012')
-                ]);
+             'nom'=>'arroud',
+             'prenom'=>'meriam',
+             'département'=>'informatique',
+             'email'=>'m.arroud@gmail.com',
+             'password'=>Hash::make('5678')
+             ]);
+             DB::table('users')->insert([
+                 'nom'=>'belmir',
+                 'prenom'=>'asmaa',
+                 'département'=>'comptabilité',
+                 'email'=>'a.belmir@gmail.com',
+                 'password'=>Hash::make('9012')
+                 ]);
+                 DB::table('users')->insert([
+                     'nom'=>'chaymae',
+                     'prenom'=>'benayad',
+                     'département'=>'informatique',
+                     'email'=>'m.naim@gmail.com',
+                     'password'=>Hash::make('2233')
+                     ]);
+                
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePresonTable extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class CreatePresonTable extends Migration
      */
     public function up()
     {
-        Schema::create('_preson', function (Blueprint $table) {
-            $table->id();
+        Schema::create('users', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('département');
+            $table->string('password');
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreatePresonTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_preson');
+        Schema::dropIfExists('users');
     }
 }

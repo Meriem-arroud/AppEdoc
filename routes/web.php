@@ -32,7 +32,7 @@ Route::view('/login', 'login');
 Route::post('/login', [UserController::class,'login']);
 Route::view('/loginadmin', 'loginadmin');
 Route::post('/loginadmin', [AdminController::class,'login']);
-Route::view('ProfileAdmin', 'ProfilAdmin');
+Route::view('ProfilAdmin', 'ProfilAdmin');
 Route::view('profile','profile');
 Route::view('vue','vue');
 
