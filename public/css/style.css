@@ -1,5 +1,62 @@
-.form-group[data-error] input{
-    border-color: red;
-    color:red;
+body{
+    
+    background-attachment: fixed;
+    background-size: cover;
 
 }
+h3{
+    color:white;
+    margin-top: 4em;
+    margin-bottom: 30px;
+
+
+}
+h1{
+    font-size: 40px;
+    color:white;
+    margin-top: 20px;
+  
+}
+.form-control{
+    background:rgba(0,0,0,0.4);
+    margin-top: 10px;
+    height:45px;
+    font-size: 23px;
+
+}
+.btn-primary {
+    margin-top:20px;
+    width:450px;
+    height:45px;
+    border:0px;
+    background:cadetblue;
+
+}
+.col-md-5{
+    background:rgba(0,0,0,0.6);
+    margin-top: 50px;
+    box-shadow: -1px 1px 50px 10px black;
+    border-radius: 10px 10px 10px 10px ;
+}
+.invalid{
+    border-color: red;
+  }
+  #form.invalid input{
+    border-color:red ;
+    background:url(delete.png) ;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y:center;
+    color:black;
+    
+  
+  }
+  #form1.invalid input{
+    border-color:red ;
+    background:url(delete.png) ;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y:center;
+    color:black;
+  }
+  

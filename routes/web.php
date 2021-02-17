@@ -34,7 +34,7 @@ Route::view('/loginadmin', 'loginadmin');
 Route::post('/loginadmin', [AdminController::class,'login']);
 Route::view('ProfileAdmin', 'ProfilAdmin');
 Route::view('profile','profile');
-//Route::view('principal','principal');
+Route::view('vue','vue');
 
 Route::get('logout', function () {
     session()->forget('user');
