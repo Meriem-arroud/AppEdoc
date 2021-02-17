@@ -49,10 +49,6 @@ class FileController extends Controller
        
 
        }
-      
-    
-        
-       
         function get(){
            
            if (DB::table('fichiers')->where('departement', session('user')->département)->exists()) {
@@ -62,18 +58,61 @@ class FileController extends Controller
             return view('principal',compact('downoald'));
          
         }
-           
-    
             }      
            
-        
-            
         function show($file){
             $fichier=$file;
-    
           header('Content-type: application/pdf');
          readfile('uploadedfile/'. $fichier);
         }
+
+
+        function search(Request $request)
+        {
+         if($request->ajax())
+         {
+          $output = '';
+          $query = $request->get('query');
+          if($query != '')
+          {
+           $data = DB::table('fichiers')->where('name', 'like', '%'.$query.'%')->get();
+          }
+          else
+          {
+           $data = DB::table('fichiers')->where('departement', session('user')->département)->get();
+          }
+          $total_row = $data->count();
+          if($total_row > 0)
+          {
+           foreach($data as $row)
+           {
+            $output .= '
+            <tr>
+             <td>'.$row->name.'</td>
+             <td><img src="'.$row->type.'"></td>
+             <td>'.$row->taille.'</td>
+             <td>'.$row->departement.'</td>
+             <td>'.$row->date.'</td>
+             <td><a href="dar/'.$row->file.'">downoald</button></td>
+             <td><a href="files/'.$row->file.'">view</a></td>
+            </tr>
+            ';
+           }
+          }
+          else
+          {
+           $output = '
+           <tr>
+            <td align="center" colspan="7">Aucune resultat</td>
+           </tr>
+           ';
+          }
+          $data = array(
+           'table_data'  => $output,
+           'total_data'  => $total_row
+          );
     
-    
+          echo json_encode($data);
+         }
+        }
 }

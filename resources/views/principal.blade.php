@@ -1,28 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Search</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head><body>
 <h1>welcome here</h1>
 Hi{{ session('user')->nom}}
-<table border="2">
+<div class="container box">
+   <h3 align="center">Live search in laravel using AJAX</h3><br />
+  
+    <div class="panel-body">
+     <div class="form-group">
+      <input type="text" name="search" id="search" class="form-control" placeholder="Chercher des fichiers ...." />
+     </div>
+     <div class="table-responsive">
+      <h3 align="center">Total du fichiers : <span id="total_records"></span></h3>
+<table class="table table-striped table-bordered">
+<thead>
 <tr>
-<th>nom</th>
-<th>type</th>
-<th>taille</th>
-<th>département</th>
-<th>date </th>
-<th>file </th>
-<th>plus</th>
+<th>Nom de fichier</th>
+<th>Type</th>
+<th>Taille</th>
+<th>Département</th>
+<th>Date </th>
+<th>Importer </th>
+<th>Consuler</th>
 </tr>
-@foreach($downoald as $down)
+</thead>
+       <tbody>
 
-<tr>
-<td>{{$down->name}}</td>
-<td><img src="{{$down->type}}"></td>
-<td>{{$down->taille}}</td>
-<td>{{$down->departement}}</td>
-<td>{{$down->date}}</td>
-<!--<td><a href="uploadedfile/{{$down->file}}"><button type="button">downoald</button></a></td>-->
-<td><a href="dar/{{$down->file}}">downoald</button></td>
-<td>
-<a href="files/{{$down->file}}">view</a>
-</td>
-</tr>
-@endforeach
-</table>
+       </tbody>
+      </table>
+     </div>
+    </div>    
+   </div>
+  </div>
+ </body>
+</html>
+
+<script>
+$(document).ready(function(){
+
+ fetch_customer_data();
+
+ function fetch_customer_data(query = '')
+ {
+  $.ajax({
+   url:"{{ route('live_search.search') }}",
+   method:'GET',
+   data:{query:query},
+   dataType:'json',
+   success:function(data)
+   {
+    $('tbody').html(data.table_data);
+    $('#total_records').text(data.total_data);
+   }
+  })
+ }
+
+ $(document).on('keyup', '#search', function(){
+  var query = $(this).val();
+  fetch_customer_data(query);
+ });
+});
+</script>

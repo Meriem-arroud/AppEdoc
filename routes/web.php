@@ -44,8 +44,9 @@ Route::middleware(['route'])->group(function () {
 Route::get('addfile',[FileController::class,'index'])->name('addfile');
 Route::post('addfile', [FileController::class,'store']);
 Route::get('getfile', [FileController::class,'get']);
-Route::get('dar/{file}', [VueController::class,'show']);
+Route::get('getfile/search', [FileController::class,'search'])->name('live_search.search');
 
+Route::get('dar/{file}', [VueController::class,'show']);
 Route::get('files/{file}', [FileController::class,'show']);
 
 Route::get('/signer',[SignatureController::class,'signatureview']);
