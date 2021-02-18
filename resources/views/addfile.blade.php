@@ -8,14 +8,17 @@
     <script type="text/javascript">
     function Message() {
       msg="it's added ";
-      
+      var text1 = document.getElementById('text1');
+       text1.innerHTML="your file is added";
+
        
-       alert(alertDiv);}
-  
+       text1.style.fontWeight = 'bold';
+    text1.style.color="#ff0000";
+    }
    </script>
 
-<h1>addfile</h1>
-<<div class="container">
+
+<div class="container">
 <div class="row">
 <div class="col-md-3"></div>
 <div class="col-md-5" >
@@ -43,6 +46,7 @@
 @endforeach
 
 </select></div>
+<div id="text1"></div>
 <button type="submit" onClick="Message()" class="btn btn-success">Add File</button>
 <button type="reset" class="btn btn-danger">Cancel</button>
 </form>

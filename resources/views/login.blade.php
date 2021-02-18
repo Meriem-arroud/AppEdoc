@@ -36,9 +36,9 @@ collection1.style.backgroundImage='url()';
 <div class="col-md-3"></div>
 <div class="col-md-5" >
 <form action="/login" method="post" >
-  <h1 class="text-center">E-Documents</h1>
+  <h2 class="text-center">log to your account</h2>
 @csrf
-<h3 class="text-center">log to your account</h3>
+
 
 
 <div class="form-group" id="form">

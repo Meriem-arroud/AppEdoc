@@ -1,7 +1,8 @@
 .col-md-5{
-    background:whitesmoke;
+    background-color:   #f2f2f2;
     margin-top: 50px;
-    box-shadow: -1px 1px 50px 10px blue;
+  border:2px solid grey;
+    box-shadow: -1px 1px 50px 10px #f2f2f2 ;
     border-radius: 10px 10px 10px 10px ;
 }
 label{
@@ -14,6 +15,7 @@ label{
     height:37px;
     font-size: 16x;
     width: 400px;
+    
 
 }
 select{
