@@ -25,13 +25,16 @@ use App\Models\Admin;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/test', function () {
+    return view('Test');
+});
 Route::view('/login', 'login');
 Route::post('/login', [UserController::class,'login']);
 Route::view('/loginadmin', 'loginadmin');
 Route::post('/loginadmin', [AdminController::class,'login']);
-Route::view('ProfileAdmin', 'ProfilAdmin');
+Route::view('ProfilAdmin', 'ProfilAdmin');
 Route::view('profile','profile');
-//Route::view('principal','principal');
+Route::view('vue','vue');
 
 Route::get('logout', function () {
     session()->forget('user');
@@ -44,10 +47,12 @@ Route::middleware(['route'])->group(function () {
 Route::get('addfile',[FileController::class,'index'])->name('addfile');
 Route::post('addfile', [FileController::class,'store']);
 Route::get('getfile', [FileController::class,'get']);
+Route::get('getfile/search', [FileController::class,'search'])->name('live_search.search');
+
 Route::get('dar/{file}', [VueController::class,'show']);
-
 Route::get('files/{file}', [FileController::class,'show']);
-
+Route::get('/contact',[Mailcontroller::class,'contact']);
+Route::post('/contact',[Mailcontroller::class,'mailsend']);
 Route::get('/signer',[SignatureController::class,'signatureview']);
 Route::post('/signer',[SignatureController::class,'signer']);
 

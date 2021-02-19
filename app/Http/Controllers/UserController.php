@@ -18,11 +18,17 @@ class UserController extends Controller
            $status="error";
            return view('login',compact('status'));
         }else{
+            if($user->id==4){
+                $req->session()->put('admin ',$user);
+                return  redirect('ProfilAdmin');
+              
+
+            }else{
 
             $req->session()->put('user',$user);
             
 
-    return  redirect('profile');
+             return  redirect('profile');}
      }
      
       
