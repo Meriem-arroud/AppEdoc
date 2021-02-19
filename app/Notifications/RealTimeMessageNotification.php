@@ -8,6 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Notifications\Messages;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 use App\Models\fichier;
 
 class RealTimeMessageNotification extends Notification implements ShouldBroadcast
@@ -23,6 +24,7 @@ class RealTimeMessageNotification extends Notification implements ShouldBroadcas
     public function __construct(fichier $fichier)
     {
         $this->fichier = $fichier;
+
     }
 
     /**
@@ -61,15 +63,16 @@ class RealTimeMessageNotification extends Notification implements ShouldBroadcas
 {
     return [
 
-          'File Name'=>$this->fichier->name,
-          'Created at'=>$this->fichier->date,
+          'message'=>'Le document '.$this->fichier->name.' a été ajouté au département '.$this->fichier->departement.' à '.$this->fichier->date,
     ];
 } 
 
-//     public function toBroadcast($notifiable)
-//     {
-//         return new BroadcastMessage ([
-//             'message' => "$this->message (User $notifiable->name)"
-//         ]);
-//     }
+    public function toBroadcast($notifiable)
+    {
+        return new BroadcastMessage ([
+
+            'message'=>'Le document '.$this->fichier->name.' a été ajouté au département '.$this->fichier->departement.' à '.$this->fichier->date,
+
+        ]);
+    }
 }
