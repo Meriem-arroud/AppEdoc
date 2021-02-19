@@ -26,7 +26,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/test', function () {
-    return view('Test');
+    return view('Test2');
 });
 Route::view('/login', 'login');
 Route::post('/login', [UserController::class,'login']);
