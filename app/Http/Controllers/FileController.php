@@ -90,11 +90,10 @@ class FileController extends Controller
             <tr>
              <td>'.$row->name.'</td>
              <td><img src="'.$row->type.'"></td>
-             <td>'.$row->taille.'</td>
              <td>'.$row->departement.'</td>
              <td>'.$row->date.'</td>
-             <td><a href="dar/'.$row->file.'">downoald</button></td>
-             <td><a href="files/'.$row->file.'">view</a></td>
+             <td><a href="dar/'.$row->file.'"><img src="images/download.png" width="45" height="45"></td>
+             <td><a href="files/'.$row->file.'"><img src="images/view.png" width="45" height="45"></a></td>
             </tr>
             ';
            }

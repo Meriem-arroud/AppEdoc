@@ -10,7 +10,7 @@ use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\VueController;
 //use App\Notifications\RealTimeMessageNotification;
-//use App\Models\User;
+use App\Models\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,8 +25,8 @@ use App\Http\Controllers\VueController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/test', function () {
-    return view('Test');
+Route::get('/home', function () {
+    return view('Home');
 });
 Route::view('/login', 'login');
 Route::post('/login', [UserController::class,'login']);
@@ -55,4 +55,14 @@ Route::get('/contact',[Mailcontroller::class,'contact']);
 Route::post('/contact',[Mailcontroller::class,'mailsend']);
 Route::get('/signer',[SignatureController::class,'signatureview']);
 Route::post('/signer',[SignatureController::class,'signer']);
+
+
+
+Route::get('markAsRead',function(){  
+    $admin = \App\Models\Admin::find(1);
+    $admin->unreadNotifications->markAsRead();
+    return redirect()->back();
+})->name('markRead');
+
+
 

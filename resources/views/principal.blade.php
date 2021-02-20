@@ -1,68 +1,53 @@
-<!DOCTYPE html>
-<html>
- <head>
-  <title>Search</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- </head><body>
-<h1>welcome here</h1>
-Hi{{ session('user')->nom}}
+<x-header />
+<style>
+.form-control:focus {
+  box-shadow: none;
+}
+</style>
+<body>
+</br></br>
 <div class="container box">
-   <h3 align="center">Live search in laravel using AJAX</h3><br />
-  
     <div class="panel-body">
-     <div class="form-group">
-      <input type="text" name="search" id="search" class="form-control" placeholder="Chercher des fichiers ...." />
-     </div>
-     <div class="table-responsive">
-      <h3 align="center">Total du fichiers : <span id="total_records"></span></h3>
-<table class="table table-striped table-bordered">
-<thead>
-<tr>
-<th>Nom de fichier</th>
-<th>Type</th>
-<th>Taille</th>
-<th>Département</th>
-<th>Date </th>
-<th>Importer </th>
-<th>Consuler</th>
-</tr>
-</thead>
-       <tbody>
+    <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+            <div class="input-group">
+              <input type="text" name="search" id="search" placeholder="Chercher un fichier....." aria-describedby="button-addon1" class="form-control border-0 bg-light">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+     <div class="limiter">
+			<div class="wrap-table100">
+            <div class="table100 ver4 m-b-110">
+					<div class="table100-head">
+				
+						<table>
+							<thead>
+								<tr class="row200 head">
+									<th class="cell100 column1">Titre du fichier</th>
+									<th class="cell100 column2">Type</th>
+									<th class="cell100 column3">Departement</th>
+									<th class="cell100 column4">Date</th>
+									<th class="cell100 column5">Importer</th>
+									<th class="cell100 column5">Consulter</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
 
-       </tbody>
-      </table>
-     </div>
+					<div class="table100-body js-pscroll">
+						<table>
+							<tbody>
+
+                            </tbody>
+                         </table>
+                   </div>
     </div>    
    </div>
-  </div>
- </body>
-</html>
-
-<script>
-$(document).ready(function(){
-
- fetch_customer_data();
-
- function fetch_customer_data(query = '')
- {
-  $.ajax({
-   url:"{{ route('live_search.search') }}",
-   method:'GET',
-   data:{query:query},
-   dataType:'json',
-   success:function(data)
-   {
-    $('tbody').html(data.table_data);
-    $('#total_records').text(data.total_data);
-   }
-  })
- }
-
- $(document).on('keyup', '#search', function(){
-  var query = $(this).val();
-  fetch_customer_data(query);
- });
-});
-</script>
+   </div>
+   </div>
+   </div>    
+   </div>
+   
+   </div>
+   <x-footer />

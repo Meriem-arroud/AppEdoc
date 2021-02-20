@@ -10,6 +10,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
+
 class RealTimeMessageEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
@@ -22,7 +23,7 @@ class RealTimeMessageEvent implements ShouldBroadcast
      */
     public function __construct($message)
     {
-        $this->message = $message;
+       $this->message = $message;
     }
 
     /**
@@ -32,6 +33,7 @@ class RealTimeMessageEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('events');
+       // return new Channel('events');
+       return new \Illuminate\Broadcasting\Channel('new-notification');
     }
 }
