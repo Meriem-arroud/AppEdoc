@@ -36,7 +36,7 @@
           <h1><a class="navbar-brand" href="/">SMAC E-doc</a></h1>
           <div id="navbar">
             <ul class="nav pull-right">
-              <li class="nav-item"><a class="nav-link" href="#contact">Sign in</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Log in</a></li>
             </ul>
           </div>
         </div>
