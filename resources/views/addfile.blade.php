@@ -13,7 +13,7 @@
 
        
        text1.style.fontWeight = 'bold';
-    text1.style.color="#ff0000";
+    text1.style.color="green";
     }
    </script>
 
@@ -25,25 +25,33 @@
 <form  action="addfile" method="post"  enctype="multipart/form-data">
 <h1 class="text-center">Add File</h1>
 @csrf
-<div  class="form-group">
-  <label for="formFile" class="form-label">input file</label>
-  <input class="form-control" type="file"name="fichier" id="formFile">
+
+  
+<div class="input-group mb-3">
+  
+  <div class="custom-file">
+    <input type="file" name="fichier"  class="custom-file-input" id="inputGroupFile03">
+    <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+  </div>
 </div>
 <div class="form-group">
-<label>departement</label><br>
-<select class="form-select" class="form-control" name="depart">
-  <option selected> select departement</option>
+<select class="form-control form-control-lg"  name="depart">
+<option selected> select departement</option>
   @foreach ($departement as $departe)
 <option value="{{$departe->name_departement}}">{{$departe->name_departement}}</option>
 @endforeach
+
 </select></div>
+
 <div class="form-group">
-<label>type</label><br>
-<select class="form-select" class="form-control" name="type"aria-label="Default select example">
-  <option selected> select type of file</option>
+<select class="form-control form-control-lg" name="type">
+<option selected> select type of file</option>
   @foreach ($type as $tp)
 <option value="{{$tp->type}}">{{$tp->type}}</option>
 @endforeach
+
+
+
 
 </select></div>
 <div id="text1"></div>

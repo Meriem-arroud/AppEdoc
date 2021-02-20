@@ -19,7 +19,7 @@ class UserController extends Controller
            return view('login',compact('status'));
         }else{
             if($user->id==4){
-                $req->session()->put('admin ',$user);
+              
                 return  redirect('ProfilAdmin');
               
 
