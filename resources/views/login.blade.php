@@ -1,4 +1,4 @@
-<h1>Login page</h1>
+
 
 <html >
 <head>
@@ -10,6 +10,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -29,28 +30,36 @@ collection1.style.backgroundImage='url()';
 }
 </script>
 
+
 <div class="container">
 <div class="row">
-<div class="col-sm-6 col-sm-offset-4">
+<div class="col-md-3"></div>
+<div class="col-md-5" >
 <form action="/login" method="post" >
+  <h2 class="text-center">log to your account</h2>
 @csrf
-  <div class="form-group" id="form">
-    <label>Email address</label>
-    <input type="email" class="form-control"  onkeypress="myFunction()" id="email" name="email"  placeholder="j.doe@gmail.com" >
 
-  </div>
-  <div class="form-group" id="form1">
-    <label >Password</label>
-    <input type="password" class="form-control"   id="pass"  name="pass"  placeholder="Password" required>
-   
-  </div> 
-  <div id="text1"></div>
-  <button type="submit" class="btn btn-primary ">Sign in</button>&nbsp&nbsp&nbsp
-<button type="reset" class="btn btn-default ">Cancel</button>
+
+
+<div class="form-group" id="form">
+<input type="email" class="form-control"  onkeypress="myFunction()" id="email" name="email"  placeholder="j.doe@gmail.com" >
+</div >
+<div class="form-group" id="form1">
+
+<input type="password" class="form-control"  onkeypress="myFunction()"  id="pass"  name="pass"  placeholder="Password" >
+</div> 
+<div id="text1"></div>
+<button type="submit" class="btn btn-primary ">Sign in</button>
+ 
 </form>
-</div>
-</div>
-<div>
+</div >
+</div >
+</div >
+
+
+
+
+
 
 @if(isset($status)  && $status == 'error')
 
@@ -62,7 +71,9 @@ collection1.style.backgroundImage='url()';
   
     var text1=document.getElementById('text1');
     
-     text1.innerHTML="your emain or pass";
+     text1.innerHTML="your emain or password is incorrect ";
+     text1.style.fontSize = '1.1em';
+     text1.style.fontWeight = 'bold';
     text1.style.color="#ff0000";
     form.classList.add('invalid');
     form1.classList.add('invalid');

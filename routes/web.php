@@ -10,7 +10,7 @@ use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\VueController;
 //use App\Notifications\RealTimeMessageNotification;
-//use App\Models\User;
+use App\Models\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,9 +32,9 @@ Route::view('/login', 'login');
 Route::post('/login', [UserController::class,'login']);
 Route::view('/loginadmin', 'loginadmin');
 Route::post('/loginadmin', [AdminController::class,'login']);
-Route::view('ProfileAdmin', 'ProfilAdmin');
+Route::view('ProfilAdmin', 'ProfilAdmin');
 Route::view('profile','profile');
-//Route::view('principal','principal');
+Route::view('vue','vue');
 
 Route::get('logout', function () {
     session()->forget('user');
@@ -55,4 +55,14 @@ Route::get('/contact',[Mailcontroller::class,'contact']);
 Route::post('/contact',[Mailcontroller::class,'mailsend']);
 Route::get('/signer',[SignatureController::class,'signatureview']);
 Route::post('/signer',[SignatureController::class,'signer']);
+
+
+
+Route::get('markAsRead',function(){  
+    $admin = \App\Models\Admin::find(1);
+    $admin->unreadNotifications->markAsRead();
+    return redirect()->back();
+})->name('markRead');
+
+
 
