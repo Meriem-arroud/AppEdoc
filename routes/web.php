@@ -25,8 +25,8 @@ use App\Models\Admin;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/test', function () {
-    return view('Test2');
+Route::get('/home', function () {
+    return view('Home');
 });
 Route::view('/login', 'login');
 Route::post('/login', [UserController::class,'login']);
