@@ -53,9 +53,17 @@ Route::post('/signer',[SignatureController::class,'signer']);
  
 //***************************************************
 Route::get('getfileAdmin',[FileController::class,'getAdmin']);
-Route::get('results',[FileController::class,'search'])->name('results');
+Route::get('getfileAdmin/search', [FileController::class,'searchAdmin'])->name('live_search.search');
 Route::get('edit/{id_document}', [FileController::class,'editDocument']);
 Route::post('updatefile/{id_document}', [FileController::class,'upDateDocument']);
 Route::get('delete/{id_document}', [FileController::class,'deleteDocument']);
 //***************************************************
+Route::get('getUsers', [UserController::class,'getUsers']);
+Route::get('getUsers/search', [UserController::class,'search'])->name('liveSearch.search');
+
+Route::get('markAsRead',function(){  
+    $admin = \App\Models\User::find(1);
+    $admin->unreadNotifications->markAsRead();
+    return redirect()->back();
+})->name('markRead');
 

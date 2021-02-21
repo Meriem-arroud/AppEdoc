@@ -7,8 +7,11 @@ use App\Models\Departement;
 use Illuminate\Http\Request;
 
 use DB;
-
+use Dotenv\Validator;
 use  Illuminate\Support\Facades\Response;
+use League\CommonMark\Block\Element\Document;
+use Symfony\Contracts\Service\Attribute\Required;
+
 class FileController extends Controller
 {
     function index(){
@@ -45,8 +48,8 @@ class FileController extends Controller
         
         $file->save();
        
-        return redirect()->route('addfile');
-       
+       // return redirect()->route('addfile');
+       return back()->with('succes_added','Le document est bien ajouté!!');
 
        }
       
@@ -67,24 +70,25 @@ class FileController extends Controller
             }      
            
         
-            
+//********************************************************************************************* */           
         function show($file){
             $fichier=$file;
     
           header('Content-type: application/pdf');
          readfile('uploadedfile/'. $fichier);
         }
-
+//********************************************************************************************* */
         function getAdmin()
            {
             $downoald=DB::table('fichiers')->get();
     
             return view('principalAdmin',compact('downoald'));
             }
-
+//********************************************************************************************* */
         function editDocument($id_document)
         {
          $id=fichier::find($id_document);//check if this id exists in database
+         
          $departement=Departement::select('id','name_departement')->get();
          $type=Type::select('id','type')->get();
         if(!$id)
@@ -95,17 +99,28 @@ class FileController extends Controller
     //********************update document**************************************************
         function upDateDocument(Request $req,$id_document)
            {
+          $req->validate([
+              'name'=>'required',
+              'type'=>'required',
+              'depart'=>'required',
+          ]);
+
+          
             $id=fichier::find($id_document);//check if this id exists in database
-           
+            $file3=new Type();
+            $file3->type=$req->type;
+            $type= $file3->type;
             if(!$id)
             return redirect()->back();
             //update data
             $id->update([
                 'departement'=>$req->depart,
                 'name'=>$req->name,
+                'type'=>'images/'. $type.'.png',
+
             ]);
           
-            return redirect()->back();
+            return redirect()->back()->with('succes_update','Le document est bien modifié!!');
            }
      //********************delete document**************************************************
      function deleteDocument(Request $request,$id_document)
@@ -116,20 +131,65 @@ class FileController extends Controller
      return redirect()->back();
 
      $id->delete();
-     return redirect()->back();
+     return redirect()->back()->with('succes_delete','Le document est bien supprimer!!');
       
      }   
-     //**************************serach for documents******************************************
+     //**************************search for documents admin******************************************
+     function searchAdmin(Request $request)
+        {
+         if($request->ajax())
+         {
+          $output = '';
+          $query = $request->get('query');
+          if($query != '')
+          {
+           $data = DB::table('fichiers')->where('name', 'like', '%'.$query.'%')->get();
+          }
+          else
+          {
+           $data = DB::table('fichiers')->get();
+          }
+          $total_row = $data->count();
+          if($total_row > 0)
+          {
+           foreach($data as $row)
+           {
+            $output .= '
+            <tr>
+             <td>'.$row->name.'</td>
+             <td><img src="'.$row->type.'"></td>
+             <td>'.$row->taille.'</td>
+             <td>'.$row->departement.'</td>
+             <td>'.$row->date.'</td>
+             <td><a href="edit/'.$row->id.'"><button type="button">modifier</button></a></td>
+             <td><a href="delete/'.$row->id.'"><button type="button">supprimer</button></a></td>
+             <td><a href=""><button type="button">arrchiver</button></a></td>
+            </tr>
+            ';
+           }
+          }
 
-     function search()
-     {
-         //$search_text=$req->get('text');
-         //$documents=DB::table('fichiers')->where('name','like','%'.$search_text.'%')->pagination(5);
-         $search_text=$_GET['text'];
-         $documents=fichier::where('name','LIKE','%'.$search_text.'%')->get();
-         return view('searchPage',compact('documents'));
-         
-     }
+          else
+          {
+           $output = '
+           <tr>
+            <td align="center"  colspan="8">Aucune resultat</td>
+           </tr>
+           ';
+          }
+          $data = array(
+           'table_data'  => $output,
+           'total_data'  => $total_row
+          );
     
+          echo json_encode($data);
+         }
+        
+        }
     
+        
+        
+     //**************************end of serach for documents admin******************************************
+      
 }
+

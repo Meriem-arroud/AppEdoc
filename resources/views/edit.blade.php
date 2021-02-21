@@ -1,33 +1,73 @@
 
-<h1>updatefile</h1>
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet"  type="text/css" href="/css/designe.css"/>
+ </head>
+ <body>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
 <form  action="{{url('updatefile/'.$id->id)}}" method="post" enctype="multipart/form-data">
 @csrf
-<center><table border="2">
-            <tr>
-                <td> Nom du document  </td>
-                <td ><input type="texte" name="name" value="{{$id->name}}"></td>
-            </tr>
-        
-            <tr>
-                <td> Nom de departement : </td>
-                <td><select name="depart">
-                <option value="{{$id->departement}}" selected disabled hidden>{{$id->departement}}</option>
-                    @foreach ($departement as $departe)
-                        <option value="{{$departe->name_departement}}" >{{$departe->name_departement}}</option>
-                    @endforeach
-                </select>
-               </td>
-            </tr>
-            <tr>
-                <td> type  </td>
-                <td><img src="{{$id->type}}"></td>
-            </tr>
-            <tr>
-                <td> taille  </td>
-                <td>{{$id->taille}}</td>
-            </tr>
-
-         </table>
- </center>
- <center><button type="submit" class="button">modify</button></center>
+<div class="container"> 
+<h3>Modifier fichier</h3>
+   <div class="row100">
+    <div class="col">
+     <div class="inputBox">
+     <input type="text" name="name" placeholder="saisir un nom" value="{{$id->name}}">
+     <span class="text">Nom du document</span>
+     <span class="line">
+     @error('name')
+          <small class="form-text text-danger" style="color: #B7521E;">{{$message}}</small>
+     @enderror
+     </span>
+     </div>
+    </div>
+   </div>
+   <div class="row100">
+    <div class="col">
+     <div class="inputBox">
+     <select  name="depart">
+              @foreach ($departement as $departe)
+                <option  value="{{$departe->name_departement}}" {{$departe->name_departement==$id->departement ? 'selected' : ''}} >{{$departe->name_departement}}</option>
+              @endforeach
+     </select>
+     <span class="text">Département</span>
+     <span class="line"></span>
+     </div>
+    </div>
+    </div>
+    <div class="row100">
+    <div class="col">
+     <div class="inputBox">
+     <select  name="type">
+     <option  value="" selected disabled hidden> </option>
+              @foreach ($type as $tp)
+                    <option value="{{$tp->type}}">{{$tp->type}}</option>
+               @endforeach
+     </select>
+     <span class="text">Type</span>
+     <span class="line">
+     @error('type')
+        <small class="form-text text-danger" style="color: #B7521E;">{{$message}}</small>
+      @enderror
+     </span>
+     </div>
+    </div>
+    </div>
+   <div class="row100">
+   <div class="col">
+   <input type="submit" value="modifier">
+   </div>
+   </div>
+</div>
 </form>
+ </body>
+ @if(Session::has('succes_update'))
+ <script>
+   swal("Bien fait!","{!! Session::get('succes_update')!!}"),{
+  button:"OK",
+   }
+ </script>
+  @endif
+</html>
+

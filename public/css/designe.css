@@ -1,0 +1,191 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+   margin-left: 500px;
+   margin-top: 100px;
+    background: cornsilk;
+}
+.container{
+    width: 50%;  
+    padding:40px;
+    background:  #666666;
+    box-shadow: 0 0 17px rgb(59, 58, 58);
+
+}
+ .container h3{
+    color:  black;
+    font-size:36px;
+    text-align: center;
+    margin-bottom: 30px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr))
+}
+.container .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    
+}
+.container .row100 .col{
+    position: relative;
+    width: 100%;
+    padding:0px;
+    margin:30px 0 10px;
+    transition : 0.5s;
+}
+.container .row100  .inputBox{
+    position:relative;
+    width:100%;
+    height:35px;
+    color:#580612;
+}
+.container .row100  .inputBox input
+{
+    position:absolute;
+    width:100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none; 
+    outline: none;
+    font-size: 17px;
+    padding:0 10px;
+    z-index:1;
+    color: rgb(1, 19, 8);
+    
+}
+
+.container .row100 .inputBox select {
+    position:absolute;
+    width:100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding:0 10px;
+    z-index:1;
+    color: rgb(1, 19, 8);
+}
+
+.container .row100  .inputBox  .text{
+    position:absolute;
+    top: 0;
+    left: 0;
+    line-height:40px;
+    font-size:18px;
+    padding: 0 10px;
+    display:block;
+    transition:0.5s;
+    pointer-events: none;
+}
+.container .row100  .inputBox select option{
+    background-color:#C0C0C0;
+    border:2px solid rgb(240, 201, 209);
+
+}
+.container .row100  .inputBox select option:hover{
+    background-color:#C0C0C0;
+    border:2px solid rgb(240, 201, 209);
+
+}
+.container .row100  .inputBox select option:checked{
+    background-color: #A19893;
+          color: #000;
+}
+
+
+
+.container .row100  .inputBox input:hover{
+    border:2px solid rgb(240, 201, 209);
+    background: #C0C0C0;
+
+}
+.container .row100  .inputBox select:hover{
+    border:2px solid rgb(240, 201, 209);
+    background: #C0C0C0;
+
+}
+
+
+.container .row100 .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #200101;
+    transition: 0.8s;
+    border-radius: 2px;
+    pointer-events:none;
+}
+.container .row100 .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text
+
+{
+    top:-40px;
+    left:-10px;
+}
+.container .row100 .inputBox select:focus + .text,
+.container .row100 .inputBox select:valid + .text
+
+{
+    top:-35px;
+    left:-10px;
+}
+
+
+/*.container .row100 .inputBox input:focus ~ .line,
+.container .row100 .inputBox input:valid ~ .line
+{
+    height: 100%;
+}
+.container .row100 .inputBox select:focus ~ .line,
+.container .row100 .inputBox select:valid ~ .line
+{
+    height: 100%;
+}
+*/
+
+input[type="file"]{
+    display: none;
+}
+label{
+    color:rgb(1, 19, 8);
+    height: 29px;
+    width: 40%;
+    background-color: pink;
+    position:absolute;
+    margin: 0px;
+    text-align: center;
+    border-radius: 0.2rem;
+    border:  1px solid red;
+    
+}
+
+
+input[type="submit"]{
+    padding: 7px 35px;
+    display: block;
+    margin: auto;
+    color:rgb(231, 209, 209);
+    font-size: 25px;
+    cursor: pointer;
+	position: relative;
+	border-radius: 0.5rem;
+	font-weight: 200;
+	border: 1px solid #444f68;
+	background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
+	box-shadow: 0 1rem 1.25rem 0 rgba(2, 2, 3, 0.5),
+							0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
+							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+}
+}
