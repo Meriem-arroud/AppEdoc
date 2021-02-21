@@ -22,8 +22,8 @@ use App\Http\Controllers\VueController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/test', function () {
-    return view('Test');
+Route::get('/home', function () {
+    return view('Home');
 });
 Route::view('/login', 'login');
 Route::post('/login', [UserController::class,'login']);
