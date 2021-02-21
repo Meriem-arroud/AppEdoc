@@ -15,7 +15,6 @@
      <div class="inputBox">
      <input type="file" id="file" name="fichier" >
      <span class="text">Choisir une département</span>
-     <label  for="file">cliquer ici... </label>
      <span class="line"></span>
      </div>
     </div>

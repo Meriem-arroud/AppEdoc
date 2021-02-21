@@ -17,7 +17,7 @@
      <span class="text">Nom du document</span>
      <span class="line">
      @error('name')
-          <small class="form-text text-danger" style="color: #B7521E;">{{$message}}</small>
+          <center><small class="form-text text-danger" style="color: red;">{{$message}}</small></center>
      @enderror
      </span>
      </div>
@@ -28,7 +28,7 @@
      <div class="inputBox">
      <select  name="depart">
               @foreach ($departement as $departe)
-                <option  value="{{$departe->name_departement}}" {{$departe->name_departement==$id->departement ? 'selected' : ''}} >{{$departe->name_departement}}</option>
+            <option  value="{{$departe->name_departement}}" {{$departe->name_departement==$id->departement ? 'selected' : ''}} >{{$departe->name_departement}}</option>
               @endforeach
      </select>
      <span class="text">Département</span>
@@ -48,7 +48,7 @@
      <span class="text">Type</span>
      <span class="line">
      @error('type')
-        <small class="form-text text-danger" style="color: #B7521E;">{{$message}}</small>
+       <center> <small class="form-text text-danger" style="color: red;">{{$message}}</small></center>
       @enderror
      </span>
      </div>

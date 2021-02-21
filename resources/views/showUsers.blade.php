@@ -17,7 +17,7 @@
       <input type="text" name="search" id="search" class="form-control" placeholder="Chercher des fichiers ...." />
      </div>
       <h3>Total du fichiers : <span id="total_records"></span></h3>
-<table>
+<table style="width: 565px;height:400px; margin-left: 255px;">
 <thead>
 <tr>
 <th>ID</th>

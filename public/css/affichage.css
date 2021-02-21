@@ -3,10 +3,9 @@
   margin-bottom: 30px;
 }
 table {
-	width: 940px;
 	box-shadow: 0 0 20px rgb(124, 97, 97);
-    margin-left: 155px;
-   
+    display:block;
+    overflow-y: scroll;  
 }
 
 th,

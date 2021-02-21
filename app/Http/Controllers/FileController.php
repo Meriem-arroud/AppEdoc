@@ -173,7 +173,7 @@ class FileController extends Controller
           {
            $output = '
            <tr>
-            <td align="center"  colspan="8">Aucune resultat</td>
+            <td align="center" style="width: 925px;height:400px;" colspan="8">Aucune resultat</td>
            </tr>
            ';
           }
