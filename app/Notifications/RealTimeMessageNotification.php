@@ -35,7 +35,7 @@ class RealTimeMessageNotification extends Notification implements ShouldBroadcas
      */
     public function via($notifiable)
     {
-        return ['database', 'broadcast'];
+        return ['database'];
     }
 
     /**
@@ -63,16 +63,8 @@ class RealTimeMessageNotification extends Notification implements ShouldBroadcas
 {
     return [
 
-          'message'=>'Le document '.$this->fichier->name.' a été ajouté au département '.$this->fichier->departement.' à '.$this->fichier->date,
+          'message'=>$this->fichier->name.' a été ajouté au département '.$this->fichier->departement.' à '.$this->fichier->date,
     ];
 } 
 
-    public function toBroadcast($notifiable)
-    {
-        return new BroadcastMessage ([
-
-            'message'=>'Le document '.$this->fichier->name.' a été ajouté au département '.$this->fichier->departement.' à '.$this->fichier->date,
-
-        ]);
-    }
 }

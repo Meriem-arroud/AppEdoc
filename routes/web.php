@@ -5,12 +5,9 @@ use App\Http\Controllers\Mailcontroller;
 use App\Http\Controllers\SignatureController;
 use App\Mail\SendMail;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\VueController;
-//use App\Notifications\RealTimeMessageNotification;
-use App\Models\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,10 +53,11 @@ Route::post('/contact',[Mailcontroller::class,'mailsend']);
 Route::get('/signer',[SignatureController::class,'signatureview']);
 Route::post('/signer',[SignatureController::class,'signer']);
 
-
+Route::get('getUsers', [UserController::class,'getUsers']);
+Route::get('getUsers/search', [UserController::class,'search'])->name('liveSearch.search');
 
 Route::get('markAsRead',function(){  
-    $admin = \App\Models\Admin::find(1);
+    $admin = \App\Models\User::find(1);
     $admin->unreadNotifications->markAsRead();
     return redirect()->back();
 })->name('markRead');
