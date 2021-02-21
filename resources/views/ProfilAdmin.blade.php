@@ -13,13 +13,14 @@ use \App\Http\Controllers\UserController;
    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="/css/admin.css" rel="stylesheet">
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/cbb8fa204a.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-
+    <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="/img/logo.png" alt="logo" height="130"/></a>
@@ -45,12 +46,31 @@ use \App\Http\Controllers\UserController;
           <a class="nav-link" href="#"> <i style="padding-right:10px" class="fas fa-user-tie"></i>Bonjour Admin</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i style="padding-right:10px" class="fas fa-sign-out-alt"></i>Se déconnecter</a>
+          <a id="logoutBtn" class="nav-link" href="#"><i style="padding-right:10px" class="fas fa-sign-out-alt"></i>Se déconnecter</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<!-- End Navbar -->
+
+<!-- SideBar -->
+    <div class="sideBar">
+      <!--Navigation bar-->
+        <ul class="navig">
+            <li><a href="#"><i class="fas fa-home"></i>Accueil</i></a></li>
+            <li><a href="#"><i class="fas fa-plus-circle"></i>Ajouter Document</i></a></li>
+            <li><a href="#"><i class="fas fa-file-alt"></i>Documents</i></a></li>
+            <li><a href="#"><i class="fas fa-users"></i>Employés</i></a></li>
+            <li><a href="#"><i class="fas fa-file-archive"></i>Documents Archivés</i></a></li>
+        </ul>
+      <!--Navigation bar end-->
+       <!--Copyright-->
+       <div class="copyright">
+        Copyright 2021&copy;Developed By SMACeDOC Team
+      </div>
+      <!--Copyright end-->
+<!-- End SideBar -->
    
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

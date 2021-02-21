@@ -40,7 +40,7 @@ class UserController extends Controller
 
         foreach ($admin->unreadNotifications as $notification) {
         foreach ($notification['data'] as $notif) {
-        echo "<li style='background-color:lightblue'><a class='dropdown-item' href='#'>".$notif."</a></li>";
+        echo "<li style='background-color:#fe4066'><a class='dropdown-item' href='#'>".$notif."</a></li>";
         }
     }
     foreach ($admin->readNotifications as $notification) {

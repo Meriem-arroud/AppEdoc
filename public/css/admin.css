@@ -1,0 +1,64 @@
+.navbar{
+    padding: 0px;
+}
+.navbar-brand{
+    padding-left: 50px;
+}
+#logoutBtn{
+    /* background-color: #BDBDBD; */
+   margin-left:150px;
+   padding: 10px;
+   border: 2px solid #fe4066;
+   border-radius: 50px;
+}
+#logoutBtn:hover{
+    background-color: #fe4066;
+   border: 2px solid #fe4066;
+   color: #fff;
+}
+
+/**** Side bar****/
+.sideBar{
+    width: 300px;
+  background-color:#f9f9f9;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 140px;
+  z-index: 10;
+  /* border-right: 1px solid #e8dfec; */
+  padding: 30px;
+  }
+  .sideBar .navig{
+      margin: 0;
+      padding: 0;
+  }
+  .sideBar .navig li{
+      display: block;
+  }
+  .sideBar .navig li a{
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 70px;
+      text-decoration: none;
+      text-transform: capitalize;
+      color: #302e4d;
+      display: block;
+      border-bottom: 3px solid #e8dfec;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+  }
+  .sideBar .navig li a:hover{
+      padding-left: 15px;
+      color: #fe4066; 
+  }
+
+  .sideBar .navig li a i{
+      padding-right: 15px;
+  }
+  .sideBar .copyright{
+      margin-top: 30px;
+    color: #7d7d7d;
+    font-size: 15px;
+    text-align: center;
+}

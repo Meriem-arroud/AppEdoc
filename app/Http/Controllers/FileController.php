@@ -52,10 +52,6 @@ class FileController extends Controller
        return back()->with('succes_added','Le document est bien ajouté!!');
 
        }
-      
-    
-        
-       
         function get(){
            
            if (DB::table('fichiers')->where('departement', session('user')->département)->exists()) {
@@ -65,15 +61,12 @@ class FileController extends Controller
             return view('principal',compact('downoald'));
          
         }
-           
-    
             }      
            
         
 //********************************************************************************************* */           
         function show($file){
             $fichier=$file;
-    
           header('Content-type: application/pdf');
          readfile('uploadedfile/'. $fichier);
         }
@@ -168,7 +161,6 @@ class FileController extends Controller
             ';
            }
           }
-
           else
           {
            $output = '
@@ -192,4 +184,3 @@ class FileController extends Controller
      //**************************end of serach for documents admin******************************************
       
 }
-
