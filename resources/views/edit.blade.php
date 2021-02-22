@@ -13,7 +13,7 @@
    <div class="row100">
     <div class="col">
      <div class="inputBox">
-     <input type="text" name="name" placeholder="saisir un nom" value="{{$id->name}}">
+     <input type="text" name="name" placeholder="saisir un nom..." value="{{$id->name}}">
      <span class="text">Nom du document</span>
      <span class="line">
      @error('name')

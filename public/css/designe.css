@@ -7,15 +7,17 @@
 }
 
 body{
-   margin-left: 500px;
-   margin-top: 100px;
-    background: cornsilk;
+   margin-left: 550px;
+   margin-top: 190px;
+   margin-bottom:10px;
+   
 }
 .container{
-    width: 50%;  
-    padding:40px;
-    background:  #666666;
-    box-shadow: 0 0 17px rgb(59, 58, 58);
+   
+    width: 60%;  
+    padding:30px;
+    background:  #a09d9d;
+    box-shadow: 0 0 17px rgb(156, 146, 146);
 
 }
  .container h3{
@@ -43,7 +45,7 @@ body{
     position:relative;
     width:100%;
     height:35px;
-    color:#580612;
+    color:#94091e;
 }
 .container .row100  .inputBox input
 {
@@ -179,12 +181,12 @@ input[type="submit"]{
     font-size: 25px;
     cursor: pointer;
 	position: relative;
-	border-radius: 0.5rem;
+	border-radius: 0.1rem;
 	font-weight: 200;
-	border: 1px solid #444f68;
+	border: 0px solid #444f68;
 	background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
-	box-shadow: 0 1rem 1.25rem 0 rgba(2, 2, 3, 0.5),
-							0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+	box-shadow: 0 1rem 1.25rem 0 rgba(105, 105, 116, 0.671),
+							0 -0.25rem 1.5rem rgb(179, 92, 121) inset,
 							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
-							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+							0 0.25rem 0.5rem 0 rgb(207, 146, 223) inset;
 }

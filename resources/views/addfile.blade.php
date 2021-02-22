@@ -15,7 +15,11 @@
      <div class="inputBox">
      <input type="file" id="file" name="fichier" >
      <span class="text">Choisir une département</span>
-     <span class="line"></span>
+     <span class="line">
+     @error('fichier')
+       <center> <small class="form-text text-danger" style="color: red;">{{$message}}</small></center>
+      @enderror
+     </span>
      </div>
     </div>
    </div>

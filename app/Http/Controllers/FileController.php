@@ -21,6 +21,10 @@ class FileController extends Controller
        
     }
     function store(Request $request){
+        $request->validate([
+            'fichier'=>'required',
+         
+        ]);
         $file=new fichier();
         $file2=new Departement();
         $file3=new Type();
