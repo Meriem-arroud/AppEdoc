@@ -32,6 +32,7 @@ Route::post('/loginadmin', [AdminController::class,'login']);
 Route::view('ProfilAdmin', 'ProfilAdmin');
 Route::view('profile','profile');
 Route::view('vue','vue');
+//Route::view('principal','principal');
 
 Route::get('logout', function () {
     session()->forget('user');
@@ -52,6 +53,14 @@ Route::get('/contact',[Mailcontroller::class,'contact']);
 Route::post('/contact',[Mailcontroller::class,'mailsend']);
 Route::get('/signer',[SignatureController::class,'signatureview']);
 Route::post('/signer',[SignatureController::class,'signer']);
+ 
+//***************************************************
+Route::get('getfileAdmin',[FileController::class,'getAdmin']);
+Route::get('getfileAdmin/search', [FileController::class,'searchAdmin'])->name('live_search.search');
+Route::get('edit/{id_document}', [FileController::class,'editDocument']);
+Route::post('updatefile/{id_document}', [FileController::class,'upDateDocument']);
+Route::get('delete/{id_document}', [FileController::class,'deleteDocument']);
+//***************************************************
 
 Route::get('getUsers', [UserController::class,'getUsers']);
 Route::get('getUsers/search', [UserController::class,'search'])->name('liveSearch.search');

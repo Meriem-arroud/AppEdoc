@@ -7,6 +7,10 @@ use App\Models\Departement;
 use Illuminate\Http\Request;
 
 use DB;
+use Dotenv\Validator;
+use  Illuminate\Support\Facades\Response;
+use League\CommonMark\Block\Element\Document;
+use Symfony\Contracts\Service\Attribute\Required;
 
 use  Illuminate\Support\Facades\Response;
 class FileController extends Controller
@@ -45,8 +49,8 @@ class FileController extends Controller
         
         $file->save();
        
-        return redirect()->route('addfile');
-       
+       // return redirect()->route('addfile');
+       return back()->with('succes_added','Le document est bien ajouté!!');
 
        }
         function get(){
@@ -60,14 +64,72 @@ class FileController extends Controller
         }
             }      
            
+        
+//********************************************************************************************* */           
         function show($file){
             $fichier=$file;
           header('Content-type: application/pdf');
          readfile('uploadedfile/'. $fichier);
         }
+//********************************************************************************************* */
+        function getAdmin()
+           {
+            $downoald=DB::table('fichiers')->get();
+    
+            return view('principalAdmin',compact('downoald'));
+            }
+//********************************************************************************************* */
+        function editDocument($id_document)
+        {
+         $id=fichier::find($id_document);//check if this id exists in database
+         
+         $departement=Departement::select('id','name_departement')->get();
+         $type=Type::select('id','type')->get();
+        if(!$id)
+        return redirect()->back();
+        return view('edit',compact('id','departement','type'));
+         
+        }
+    //********************update document**************************************************
+        function upDateDocument(Request $req,$id_document)
+           {
+          $req->validate([
+              'name'=>'required',
+              'type'=>'required',
+              'depart'=>'required',
+          ]);
 
+          
+            $id=fichier::find($id_document);//check if this id exists in database
+            $file3=new Type();
+            $file3->type=$req->type;
+            $type= $file3->type;
+            if(!$id)
+            return redirect()->back();
+            //update data
+            $id->update([
+                'departement'=>$req->depart,
+                'name'=>$req->name,
+                'type'=>'images/'. $type.'.png',
 
-        function search(Request $request)
+            ]);
+          
+            return redirect()->back()->with('succes_update','Le document est bien modifié!!');
+           }
+     //********************delete document**************************************************
+     function deleteDocument(Request $request,$id_document)
+     {
+      $id=fichier::find($id_document);//check if this id exists in database
+      
+     if(!$id)
+     return redirect()->back();
+
+     $id->delete();
+     return redirect()->back()->with('succes_delete','Le document est bien supprimer!!');
+      
+     }   
+     //**************************search for documents admin******************************************
+     function searchAdmin(Request $request)
         {
          if($request->ajax())
          {
@@ -79,7 +141,7 @@ class FileController extends Controller
           }
           else
           {
-           $data = DB::table('fichiers')->where('departement', session('user')->département)->get();
+           $data = DB::table('fichiers')->get();
           }
           $total_row = $data->count();
           if($total_row > 0)
@@ -90,8 +152,14 @@ class FileController extends Controller
             <tr>
              <td>'.$row->name.'</td>
              <td><img src="'.$row->type.'"></td>
+             <td>'.$row->taille.'</td>
              <td>'.$row->departement.'</td>
              <td>'.$row->date.'</td>
+             <td><a href="dar/'.$row->file.'">downoald</button></td>
+             <td><a href="files/'.$row->file.'">view</a></td>
+             <td><a href="edit/'.$row->id.'"><button type="button">modifier</button></a></td>
+             <td><a href="delete/'.$row->id.'"><button type="button">supprimer</button></a></td>
+             <td><a href=""><button type="button">arrchiver</button></a></td>
              <td><a href="dar/'.$row->file.'"><img src="images/download.png" width="45" height="45"></td>
              <td><a href="files/'.$row->file.'"><img src="images/view.png" width="45" height="45"></a></td>
             </tr>
@@ -102,7 +170,7 @@ class FileController extends Controller
           {
            $output = '
            <tr>
-            <td align="center" colspan="7">Aucune resultat</td>
+            <td align="center" style="width: 925px;height:400px;" colspan="8">Aucune resultat</td>
            </tr>
            ';
           }
@@ -113,5 +181,11 @@ class FileController extends Controller
     
           echo json_encode($data);
          }
+        
         }
+    
+        
+        
+     //**************************end of serach for documents admin******************************************
+      
 }

@@ -1,56 +1,65 @@
-<link href="{{ asset('js/app.js') }}" rel="stylesheet">
-    
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <link href="{{ asset('css/styleaddfile.css') }}" rel="stylesheet">
-    <script type="text/javascript">
-    function Message() {
-      msg="it's added ";
-      var text1 = document.getElementById('text1');
-       text1.innerHTML="your file is added";
-
-       
-       text1.style.fontWeight = 'bold';
-    text1.style.color="#ff0000";
-    }
-   </script>
-
-
-<div class="container">
-<div class="row">
-<div class="col-md-3"></div>
-<div class="col-md-5" >
-<form  action="addfile" method="post"  enctype="multipart/form-data">
-<h1 class="text-center">Add File</h1>
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet"  type="text/css" href="/css/designe.css"/>
+ </head>
+ <body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
+<form action="addfile" method="post" enctype="multipart/form-data">
 @csrf
-<div  class="form-group">
-  <label for="formFile" class="form-label">input file</label>
-  <input class="form-control" type="file"name="fichier" id="formFile">
+<div class="container"> 
+<h3>Ajouter un document</h3>
+   <div class="row100">
+    <div class="col">
+     <div class="inputBox">
+     <input type="file" id="file" name="fichier" >
+     <span class="text">Choisir une département</span>
+     <span class="line"></span>
+     </div>
+    </div>
+   </div>
+   <div class="row100">
+    <div class="col">
+     <div class="inputBox">
+     <select name="depart">
+       @foreach ($departement as $departe)
+      <option value="{{$departe->name_departement}}">{{$departe->name_departement}}</option>
+       @endforeach
+     </select>
+     <span class="text">Choisir une département</span>
+     <span class="line"></span>
+     </div>
+    </div>
+    </div>
+    <div class="row100">
+    <div class="col">
+     <div class="inputBox">
+     <select name="type">
+       @foreach ($type as $tp)
+         <option value="{{$tp->type}}">{{$tp->type}}</option>
+      @endforeach
+    </select>
+     <span class="text">Choisir un type</span>
+     <span class="line"></span>
+     </div>
+    </div>
+    </div>
+   <div class="row100">
+   <div class="col">
+   <input type="submit" value="Ajouter">
+   </div>
+   </div>
 </div>
-<div class="form-group">
-<label>departement</label><br>
-<select class="form-select" class="form-control" name="depart">
-  <option selected> select departement</option>
-  @foreach ($departement as $departe)
-<option value="{{$departe->name_departement}}">{{$departe->name_departement}}</option>
-@endforeach
-</select></div>
-<div class="form-group">
-<label>type</label><br>
-<select class="form-select" class="form-control" name="type"aria-label="Default select example">
-  <option selected> select type of file</option>
-  @foreach ($type as $tp)
-<option value="{{$tp->type}}">{{$tp->type}}</option>
-@endforeach
-
-</select></div>
-<div id="text1"></div>
-<button type="submit" onClick="Message()" class="btn btn-success">Add File</button>
-<button type="reset" class="btn btn-danger">Cancel</button>
 </form>
-</div >
-</div >
-</div >
+
+ </body>
+ @if(Session::has('succes_added'))
+ <script>
+   swal("Bien fait!","{!! Session::get('succes_added')!!}"),{
+  button:"OK",
+   }
+ </script>
+  @endif
+</html>
 

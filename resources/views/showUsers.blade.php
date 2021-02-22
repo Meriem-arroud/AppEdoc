@@ -9,19 +9,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet"  type="text/css" href="/css/affichage.css"/>
 </head>
 <body>
-
-<div class="container box">
-   <h3 align="center">Live search in laravel using AJAX</h3><br />
-  
-    <div class="panel-body">
+<div class="container">
      <div class="form-group">
-      <input type="text" name="search" id="search" class="form-control" placeholder="Chercher des employés par nom ...." />
+      <input type="text" name="search" id="search" class="form-control" placeholder="Chercher des fichiers ...." />
      </div>
-     <div class="table-responsive">
-      <h3 align="center">Total des employés : <span id="total_records"></span></h3>
-<table class="table table-striped table-bordered">
+      <h3>Total du fichiers : <span id="total_records"></span></h3>
+<table style="width: 565px;height:400px; margin-left: 255px;">
 <thead>
 <tr>
 <th>ID</th>
@@ -37,8 +33,6 @@
       </table>
      </div>
     </div>    
-   </div>
-  </div>
  </body>
 </html>
 

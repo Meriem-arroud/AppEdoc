@@ -101,7 +101,7 @@ class UserController extends Controller
        {
         $output = '
         <tr>
-         <td align="center" colspan="7">Aucune resultat</td>
+         <td align="center" style="width: 565px;height:400px;" colspan="5">Aucune resultat</td>
         </tr>
         ';
        }

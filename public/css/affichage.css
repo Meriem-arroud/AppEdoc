@@ -1,0 +1,82 @@
+.container{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+table {
+	box-shadow: 0 0 20px rgb(124, 97, 97);
+    display:block;
+    overflow-y: scroll;  
+}
+
+th,
+td {
+	padding: 18px;
+	background-color: rgba(255,255,255,0.2);
+	color: black;
+   
+}
+
+th {
+	text-align: left;
+}
+
+thead th {
+ background-color: #ecb9dd;
+	
+}
+
+
+tbody tr:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+tbody tr td{
+			background-color: pink;
+            position: relative;
+           
+	}
+   
+tbody tr td:hover {
+    background-color: rgba(36, 6, 6, 0.3);
+} 
+
+button{
+        display: block;
+        margin: auto;
+        color:rgb(231, 209, 209);
+        font-size: 15px;
+        cursor: pointer;
+        position: relative;
+        border-radius: 0.5rem;
+        border: #444f68;
+        background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
+        box-shadow: 0 1rem 1.25rem 0 rgba(2, 2, 3, 0.5),
+                                0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+                                0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
+                                0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+
+}
+a:link 
+{ 
+ text-decoration:none; 
+}
+#search{
+    width: 40%;
+    height: 30px;
+    background-color: rgb(245, 235, 235);
+    padding-left: 2%;
+    margin-top: 10px;
+    border: 1.5 solid;
+    border-radius:20px ;
+    display: block;
+    margin: auto;
+    color: rgb(0, 0, 0);
+}
+.container .form-group {
+    margin-top: 20px; 
+}
+
+
+.container h3 {
+    color: rgb(12, 7, 7);
+    text-align: center;
+}
