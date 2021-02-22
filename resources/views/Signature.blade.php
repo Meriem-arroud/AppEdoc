@@ -5,9 +5,6 @@
             border: 2px dashed grey;
             height:300px;
         }
-        #btn-save{
-            color:#bbdfc8;
-        }
     </style>
 </head>
 <body>
