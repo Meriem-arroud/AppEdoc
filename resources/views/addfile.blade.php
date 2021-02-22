@@ -1,17 +1,15 @@
 <x-header />
 
 
-  
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script type="text/javascript">
     function Message() {
-      msg="it's added ";
-      var text1 = document.getElementById('text1');
-       text1.innerHTML="your file is added";
 
-       
-       text1.style.fontWeight = 'bold';
-    text1.style.color="green";
-    }
+     
+   swal("Bien fait!","{!! Session::get('succes_added')!!}"),{
+  button:"OK",
+   }
+
    </script>
 
 
@@ -20,6 +18,9 @@ h1{
   margin-top:20px;
   margin-bottom:30px;
 }
+
+
+
 </style>
 <h1 class="text-center">Add File</h1>
 
@@ -60,7 +61,7 @@ h1{
 
 </select></div>
 <div id="text1"></div>
-<button type="submit" class="btn btn-primary">Add File</button>
+<button type="submit" onclick="Message()" class="btn btn-primary">Add File</button>
 
 <button type="reset" class="btn btn-outline-dark">Cancel</button>
 </form>
