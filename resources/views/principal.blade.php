@@ -2,10 +2,17 @@
 <style>
 .form-control:focus {
   box-shadow: none;
+
 }
+h1{
+  margin-top:20px;
+  margin-bottom:30px;
+}
+
 </style>
 <body>
 </br></br>
+<h1 class="text-center">Search for a file</h1>
 <div class="container box">
     <div class="panel-body">
     <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">

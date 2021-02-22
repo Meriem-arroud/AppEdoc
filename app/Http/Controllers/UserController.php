@@ -28,7 +28,7 @@ class UserController extends Controller
             $req->session()->put('user',$user);
             
 
-             return  redirect('profile');}
+             return  redirect('home');}
      }
      
       

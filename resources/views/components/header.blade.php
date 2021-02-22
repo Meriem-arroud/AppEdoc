@@ -1,3 +1,7 @@
+<style>
+
+
+</style>
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -36,7 +40,7 @@
           <h1><a class="navbar-brand" href="/">SMAC E-doc</a></h1>
           <div id="navbar">
             <ul class="nav pull-right">
-              <li class="nav-item"><a class="nav-link" href="#contact">Log in</a></li>
+              <li class="nav-item"><a class="nav-link" href="logout">Log out</a></li>
             </ul>
           </div>
         </div>
@@ -63,7 +67,7 @@
           <div class="card mb-3">
             <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="500">
               <div class="text-primary"><i class="pb-3 fas fa-plus-square fa-3x"></i>
-                <p class="font-weight-bold">Add file</p>
+                <p class="font-weight-bold"><a href="addfile">Add file</a></p>
               </div>
             </div>
           </div>
@@ -72,7 +76,7 @@
           <div class="card mb-3">
             <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="1000">
             <div class="text-primary"><i class="pb-3 fas fa-folder-open fa-3x"></i>
-                <p class="font-weight-bold">Show file</p>
+                <p class="font-weight-bold"><a href="getfile">Show file</a></p>
               </div>
             </div>
           </div>
@@ -81,7 +85,7 @@
           <div class="card mb-3">
             <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="1500">
               <div class="text-primary"><i class="pb-3 fas fa-share fa-3x"></i>
-                <p class="font-weight-bold">Send email</p>
+                <p class="font-weight-bold"><a href="contact">Send email</a></p>
               </div>
             </div>
           </div>
@@ -90,7 +94,7 @@
           <div class="card mb-3">
             <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="2000">
             <div class="text-primary"><i class="pb-3 fas fa-pencil-square-o fa-3x"></i>
-                <p class="font-weight-bold">Signer</p>
+                <p class="font-weight-bold"><a href="signer">Signer</a></p>
               </div>
             </div>
           </div>

@@ -1,11 +1,8 @@
-<link href="{{ asset('js/app.js') }}" rel="stylesheet">
-    
+<x-header />
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('css/styleaddfile.css') }}" rel="stylesheet">
-    <script type="text/javascript">
+  
+<script type="text/javascript">
     function Message() {
       msg="it's added ";
       var text1 = document.getElementById('text1');
@@ -18,18 +15,26 @@
    </script>
 
 
+<style>
+h1{
+  margin-top:20px;
+  margin-bottom:30px;
+}
+</style>
+<h1 class="text-center">Add File</h1>
+
 <div class="container">
 <div class="row">
 <div class="col-md-3"></div>
 <div class="col-md-5" >
 <form  action="addfile" method="post"  enctype="multipart/form-data">
-<h1 class="text-center">Add File</h1>
+
 @csrf
 
   
 <div class="input-group mb-3">
   
-  <div class="custom-file">
+<div class="custom-file">
     <input type="file" name="fichier"  class="custom-file-input" id="inputGroupFile03">
     <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
   </div>
@@ -55,10 +60,12 @@
 
 </select></div>
 <div id="text1"></div>
-<button type="submit" onClick="Message()" class="btn btn-success">Add File</button>
-<button type="reset" class="btn btn-danger">Cancel</button>
+<button type="submit" class="btn btn-primary">Add File</button>
+
+<button type="reset" class="btn btn-outline-dark">Cancel</button>
 </form>
 </div >
 </div >
 </div >
 
+<x-footer />
