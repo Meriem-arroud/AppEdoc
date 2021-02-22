@@ -22,7 +22,7 @@ class UserController extends Controller
            return view('login',compact('status'));
         }else{
             if($user->id==1){
-                $req->session()->put('admin ',$user);
+                $req->session()->put('admin',$user);
                 return  redirect('ProfilAdmin');
               
 
@@ -40,7 +40,7 @@ class UserController extends Controller
 
         foreach ($admin->unreadNotifications as $notification) {
         foreach ($notification['data'] as $notif) {
-        echo "<li style='background-color:#fe4066'><a class='dropdown-item' href='#'>".$notif."</a></li>";
+        echo "<li style='background-color:#e8dfec'><a class='dropdown-item' href='#'>".$notif."</a></li>";
         }
     }
     foreach ($admin->readNotifications as $notification) {

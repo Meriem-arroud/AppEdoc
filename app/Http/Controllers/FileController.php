@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\fichier;
 use App\Models\Type;
 use App\Models\Departement;
+use App\Models\Docarchive;
 use Illuminate\Http\Request;
 
 use DB;
@@ -73,6 +74,54 @@ class FileController extends Controller
             $fichier=$file;
           header('Content-type: application/pdf');
          readfile('uploadedfile/'. $fichier);
+        }
+//********************************************************************************************* */
+        function search(Request $request)
+        {
+        if($request->ajax())
+        {
+        $output = '';
+        $query = $request->get('query');
+        if($query != '')
+        {
+        $data = DB::table('fichiers')->where('name', 'like', '%'.$query.'%')->get();
+        }
+        else
+        {
+        $data = DB::table('fichiers')->where('departement', session('user')->département)->get();
+        }
+        $total_row = $data->count();
+        if($total_row > 0)
+        {
+        foreach($data as $row)
+        {
+            $output .= '
+            <tr>
+            <td>'.$row->name.'</td>
+            <td><img src="'.$row->type.'"></td>
+            <td>'.$row->departement.'</td>
+            <td>'.$row->date.'</td>
+            <td><a href="dar/'.$row->file.'"><img src="images/download.png" width="45" height="45"></a></td>
+            <td><a href="files/'.$row->file.'"><img src="images/view.png" width="45" height="45"></a></td>
+            </tr>
+            ';
+        }
+        }
+        else
+        {
+        $output = '
+        <tr>
+            <td align="center" colspan="7">Aucun résultat</td>
+        </tr>
+        ';
+        }
+        $data = array(
+        'table_data'  => $output,
+        'total_data'  => $total_row
+        );
+
+        echo json_encode($data);
+        }
         }
 //********************************************************************************************* */
         function getAdmin()
@@ -158,9 +207,10 @@ class FileController extends Controller
              <td>'.$row->taille.'</td>
              <td>'.$row->departement.'</td>
              <td>'.$row->date.'</td>
-             <td><a href="edit/'.$row->id.'"><button type="button">modifier</button></a></td>
-             <td><a href="delete/'.$row->id.'"><button type="button">supprimer</button></a></td>
-             <td><a href=""><button type="button">arrchiver</button></a></td>
+             <td><a href="files/'.$row->file.'"><button class="button" type="button"><i class="fas fa-eye"></i></i></button></a></td>
+             <td><a href="edit/'.$row->id.'"><button class="button" type="button"><i class="fas fa-edit"></i></button></a></td>
+             <td><a href="delete/'.$row->id.'"><button class="button" type="button"><i class="fas fa-trash"></i></button></a></td>
+             <td><a href="archive/'.$row->id.'"><button class="button" type="button"><i class="fas fa-file-archive"></i></button></a></td>
             </tr>
             ';
            }
@@ -169,7 +219,7 @@ class FileController extends Controller
           {
            $output = '
            <tr>
-            <td align="center" style="width: 925px;height:400px;" colspan="8">Aucune resultat</td>
+            <td align="center" style="width:1020px;height:500px;" colspan="8">Aucun résultat</td>
            </tr>
            ';
           }
@@ -183,8 +233,35 @@ class FileController extends Controller
         
         }
     
-        
-        
      //**************************end of serach for documents admin******************************************
+
+
+    /***********Archiver un document**************/
+    public function archiverDoc($idDoc)
+{
+      
+    $first = fichier::where('id', $idDoc)->first(); //this will select the row with the given id
+    //now we save the data in the variables;
+    $name = $first->name;
+    $file = $first->file;
+    $type = $first->type;
+    $taille = $first->taille;
+    $depart = $first->departement;
+    $date = $first->date;
+    $first->delete();
+
+    $second = new Docarchive();
+     $second->name=$name;
+     $second->file=$file;
+     $second->type=$type;
+     $second->taille=$taille;
+     $second->departement=$depart;
+     $second->date=$date;
+    $second->save();
+
+    return redirect()->back()->with('succes_archive','Le document est bien archivé!!');
+
+}
+
       
 }

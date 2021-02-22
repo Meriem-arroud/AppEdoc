@@ -22,8 +22,8 @@ use App\Http\Controllers\VueController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/test', function () {
-    return view('Test');
+Route::get('/home', function () {
+    return view('Home');
 });
 Route::view('/login', 'login');
 Route::post('/login', [UserController::class,'login']);
@@ -60,6 +60,7 @@ Route::get('getfileAdmin/search', [FileController::class,'searchAdmin'])->name('
 Route::get('edit/{id_document}', [FileController::class,'editDocument']);
 Route::post('updatefile/{id_document}', [FileController::class,'upDateDocument']);
 Route::get('delete/{id_document}', [FileController::class,'deleteDocument']);
+Route::get('archive/{id}', [FileController::class,'archiverDoc']);
 //***************************************************
 
 Route::get('getUsers', [UserController::class,'getUsers']);
