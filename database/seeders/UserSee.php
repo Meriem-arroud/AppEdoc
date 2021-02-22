@@ -15,31 +15,38 @@ class UserSee extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'nom'=>'saadoune',
-            'prenom'=>'soukaina',
+            'nom'=>'Super',
+            'prenom'=>'Admin',
             'département'=>'management',
-            'email'=>'s.saadoune@gmail.com',
-            'password'=>Hash::make('1234')
+            'email'=>'sup.admin@gmail.com',
+            'password'=>Hash::make('0000')
             ]);
             DB::table('users')->insert([
-             'nom'=>'arroud',
-             'prenom'=>'meriam',
+                'nom'=>'Saadoune',
+                'prenom'=>'Soukaina',
+                'département'=>'management',
+                'email'=>'s.saadoune@gmail.com',
+                'password'=>Hash::make('1234')
+                ]);
+            DB::table('users')->insert([
+             'nom'=>'Arroud',
+             'prenom'=>'Meriem',
              'département'=>'informatique',
              'email'=>'m.arroud@gmail.com',
              'password'=>Hash::make('5678')
              ]);
              DB::table('users')->insert([
-                 'nom'=>'belmir',
-                 'prenom'=>'asmaa',
+                 'nom'=>'Belmir',
+                 'prenom'=>'Asmae',
                  'département'=>'comptabilité',
                  'email'=>'a.belmir@gmail.com',
                  'password'=>Hash::make('9012')
                  ]);
                  DB::table('users')->insert([
-                     'nom'=>'chaymae',
-                     'prenom'=>'benayad',
+                     'nom'=>'Benayad',
+                     'prenom'=>'Chaymae',
                      'département'=>'informatique',
-                     'email'=>'m.naim@gmail.com',
+                     'email'=>'c.benayad@gmail.com',
                      'password'=>Hash::make('2233')
                      ]);
                 

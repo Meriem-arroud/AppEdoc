@@ -1,0 +1,113 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;900&display=swap');
+/**** Nav bar****/
+.navbar{
+    padding: 15px;
+    border-bottom: 1px solid #e8dfec;
+}
+.navbar-brand{
+    padding-left: 50px;
+}
+#logoutBtn{
+    /* background-color: #BDBDBD; */
+   margin-left:150px;
+   padding: 10px;
+   border: 2px solid #fe4066;
+   border-radius: 50px;
+}
+#logoutBtn:hover{
+    background-color: #fe4066;
+   color: #fff;
+}
+
+/**** Side bar****/
+#logo{
+    padding-left: 10px;
+    height: 150px;
+    width: 200px;
+}
+.sideBar{
+    width: 260px;
+  background-color:#f9f9f9;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;  
+  z-index: 10;
+  border-right: 1px solid #e8dfec;
+  padding: 30px;
+  }
+  .sideBar .navig{
+      margin: 0;
+      padding: 0;
+  }
+  .sideBar .navig li{
+      display: block;
+  }
+  .sideBar .navig li a{
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 70px;
+      text-decoration: none;
+      text-transform: capitalize;
+      color: #302e4d;
+      display: block;
+      border-bottom: 3px solid #e8dfec;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+  }
+  .sideBar .navig li a:hover{
+      padding-left: 15px;
+      color: #fe4066; 
+  }
+
+  .sideBar .navig li a i{
+      padding-right: 15px;
+  }
+  .sideBar .copyright{
+      margin-top: 30px;
+    color: #7d7d7d;
+    font-size: 15px;
+    text-align: center;
+}
+/******Content*****/
+.mainContent{
+    padding-left: 260px;
+    padding-top: 30px; 
+}
+
+.section{
+    min-height: 100vh;
+    display: block;
+    
+}
+.title h2{
+    font-size: 30px;
+    color: #302e4d;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+}
+.title h2::before{
+    content: '';
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    top: 100%;
+    left:0;
+    background-color: #fe4066;
+}
+.title h2::after{
+    content: '';
+    height: 4px;
+    width: 25px;
+    position: absolute;
+    top: 120%;
+    left:0;
+    background-color: #fe4066;
+}
+
+.padding-15{
+    padding: 0 15px 0 15px;
+}
