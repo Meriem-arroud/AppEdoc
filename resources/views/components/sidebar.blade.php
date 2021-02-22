@@ -1,6 +1,7 @@
 <div>
     <!-- SideBar -->
     <div class="sideBar">
+    <a href="#"><img src="/img/logo.png" alt="logo" id="logo"/></a>
       <!--Navigation bar-->
         <ul class="navig">
             <li><a href="#"><i class="fas fa-home"></i>Accueil</i></a></li>
