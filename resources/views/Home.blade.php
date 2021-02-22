@@ -2,9 +2,10 @@
     <div class="page-content">
       <div>
 <div class="tf-work-section">
-  <div class="container" id="work">
-    <h2 class="h3">Our Success Stories</h2>
-  </div>
+<div class="section-title">
+          <h2>Galerie </h2>
+        </div>
+
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-sm-12 pt-2">
