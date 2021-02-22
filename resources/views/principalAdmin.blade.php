@@ -73,7 +73,7 @@ $(document).ready(function(){
  function fetch_customer_data(query = '')
  {
   $.ajax({
-   url:"{{ route('live_search.search') }}",
+   url:"{{ route('live_searchAdmin.search') }}",
    method:'GET',
    data:{query:query},
    dataType:'json',

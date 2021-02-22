@@ -1,56 +1,54 @@
-
-.container{
-   
-    width: 600px;  
-    background:  #a09d9d;
-    box-shadow: 0 0 17px rgb(156, 146, 146);
-
+*
+{
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
 }
- .container h3{
-    color:  black;
-    font-size:36px;
-    text-align: center;
-    margin-bottom: 30px;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr))
+.container{
+    margin-top: 45px;
+    margin-bottom: 15px;
+    width: 570px; 
+    height: 400px; 
+    padding:40px;
+    background:  #dbd5d5;
+    box-shadow: 0 0 17px rgb(211, 201, 201);
+
 }
 .container .row100{
     position: relative;
     width: 100%;
-    display: grid;
+    height: 85px;
+    display:grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     
 }
 .container .row100 .col{
     position: relative;
-   
     padding:0px;
-    margin:30px 0 10px;
+    margin:35px 0 10px;
     transition : 0.5s;
 }
 .container .row100  .inputBox{
     position:relative;
     width:100%;
-    height:35px;
-    color:#94091e;
+    height:40px;
+    color:rgb(192, 36, 36);
 }
 .container .row100  .inputBox input
 {
-    position:absolute;
-    width:100%;
-    height: 100%;
+    margin-top: 2px;
     background: transparent;
     box-shadow: none;
     border: none; 
     outline: none;
     font-size: 17px;
     padding:0 10px;
-    z-index:1;
-    color: rgb(1, 19, 8);
+
+    color: rgb(0, 0, 0);
     
 }
 
 .container .row100 .inputBox select {
-    position:absolute;
+  
     width:100%;
     height: 100%;
     background: transparent;
@@ -59,8 +57,7 @@
     outline: none;
     font-size: 18px;
     padding:0 10px;
-    z-index:1;
-    color: rgb(1, 19, 8);
+    color: rgb(34, 32, 32);
 }
 
 .container .row100  .inputBox  .text{
@@ -75,30 +72,30 @@
     pointer-events: none;
 }
 .container .row100  .inputBox select option{
-    background-color:#C0C0C0;
-    border:2px solid rgb(240, 201, 209);
+    background-color:#e2dfdf;
+    border:2px solid#e2dfdf;
 
 }
 .container .row100  .inputBox select option:hover{
-    background-color:#C0C0C0;
-    border:2px solid rgb(240, 201, 209);
+    background-color:#e2dfdf;
+    border:1px solid #e2dfdf;
 
 }
 .container .row100  .inputBox select option:checked{
-    background-color: #A19893;
+    background-color: #d1c5c5cb;
           color: #000;
 }
 
 
 
 .container .row100  .inputBox input:hover{
-    border:2px solid rgb(240, 201, 209);
-    background: #C0C0C0;
+    border:1px solid#e2dfdf;
+    background: #e2dfdf;
 
 }
 .container .row100  .inputBox select:hover{
-    border:2px solid rgb(240, 201, 209);
-    background: #C0C0C0;
+    border:1px solid #e2dfdf;
+    background: #e2dfdf;
 
 }
 
@@ -170,9 +167,6 @@ input[type="submit"]{
 	border-radius: 0.1rem;
 	font-weight: 200;
 	border: 0px solid #444f68;
-	background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
-	box-shadow: 0 1rem 1.25rem 0 rgba(105, 105, 116, 0.671),
-							0 -0.25rem 1.5rem rgb(179, 92, 121) inset,
-							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
-							0 0.25rem 0.5rem 0 rgb(207, 146, 223) inset;
+	background-image: linear-gradient(-180deg, #fa6583 0%, #FE4066 100%);
+	
 }
