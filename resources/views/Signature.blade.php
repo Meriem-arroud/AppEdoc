@@ -5,6 +5,9 @@
             border: 2px dashed grey;
             height:300px;
         }
+        #btn-save{
+            color:#bbdfc8;
+        }
     </style>
 </head>
 <body>
@@ -17,7 +20,7 @@
                 <hr>
                 <div id="canvasDiv"></div>
                 <br>
-                <button type="button" class="btn btn-info" id="btn-save">Save</button>
+                <button type="button" class="btn btn-info" id="">Save</button>
                 <button type="button" class="btn btn-outline-dark" id="reset-btn">Clear</button>
             </div>
             <form id="signatureform" action="" style="display:none" method="post">
