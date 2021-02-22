@@ -1,15 +1,31 @@
 
 <!DOCTYPE html>
 <html>
- <head>
+ <head> <!-- Style -->
+  <link rel="stylesheet"  type="text/css" href="/css/affichage.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link href="/css/admin.css" rel="stylesheet">
   <link rel="stylesheet"  type="text/css" href="/css/designe.css"/>
+   <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/cbb8fa204a.js" crossorigin="anonymous"></script>
+ 
  </head>
  <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
 <form action="addfile" method="post" enctype="multipart/form-data">
 @csrf
+  <!--Navbar-->
+  <x-navbar />
+   <!--Sidebar-->
+   <x-sidebar />
+  <!--Main content-->
+  <div class="mainContent">
+        <!--section-->
+        <section class="section">
+        <div class="title padding-15">
+                <h2>Ajouter Document</h2>
+        </div>
 <div class="container"> 
-<h3>Ajouter un document</h3>
    <div class="row100">
     <div class="col">
      <div class="inputBox">
@@ -52,6 +68,8 @@
    </div>
 </div>
 </form>
+</section>
+</div>
 
  </body>
  @if(Session::has('succes_added'))
@@ -61,5 +79,8 @@
    }
  </script>
   @endif
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
 </html>
 
