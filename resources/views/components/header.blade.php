@@ -30,7 +30,7 @@
     </noscript>
   </head>
   <body id="top"> 
-    <header class="tf-header" data-parallax="scroll" data-image-src="images/1-hero-image.jpg">
+    <header class="tf-header" data-parallax="scroll" data-image-src="images/h4.PNG">
       <nav class="navbar py-5 navbar-dark">
         <div class="container">
           <h1><a class="navbar-brand" href="/">SMAC E-doc</a></h1>
@@ -44,12 +44,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7 col-sm-12">
-            <h2> SmaceDoc votre coffre-fort <br> numérique personnel</h2>
+            <h2> SmaceDoc votre coffre-fort <br> numérique professionnel</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-md-7 col-sm-12">
-            <p class="mt-5"><strong class="text-uppercase">Recevez et importer consulter signer en ligne tous vos documents administratifs professionnels et personnels</strong></p>
+            <p class="mt-5"><strong class="text-uppercase">Recevez et importer consulter signer en ligne tous vos documents administratifs professionnels</strong></p>
           </div>
         </div>
       </div>
