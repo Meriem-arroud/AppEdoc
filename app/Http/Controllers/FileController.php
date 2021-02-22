@@ -21,7 +21,18 @@ class FileController extends Controller
         return view('addfile',compact('departement','type'));
        
     }
+    function indexAdmin(){
+        $departement=Departement::select('id','name_departement')->get();
+       $type=Type::select('id','type')->get();
+        return view('addfileAdmin',compact('departement','type'));
+       
+    }
+
     function store(Request $request){
+        $request->validate([
+            'fichier'=>'required',
+         
+        ]);
         $file=new fichier();
         $file2=new Departement();
         $file3=new Type();
@@ -50,7 +61,7 @@ class FileController extends Controller
         $file->save();
        
        // return redirect()->route('addfile');
-       return back()->with('succes_added','Le document est bien ajouté!!');
+       return redirect()->back()->with('succes_added','Le document est bien ajouté!!');
 
        }
         function get(){
