@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Start Simple</title>
+    <title>Smac E-doc</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap" media="print" onload="this.media='all'"/>
@@ -30,7 +30,7 @@
     </noscript>
   </head>
   <body id="top"> 
-    <header class="tf-header" data-parallax="scroll" data-image-src="images/1-hero-image.jpg">
+    <header class="tf-header" data-parallax="scroll" data-image-src="images/h4.PNG">
       <nav class="navbar py-5 navbar-dark">
         <div class="container">
           <h1><a class="navbar-brand" href="/">SMAC E-doc</a></h1>
@@ -44,58 +44,61 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7 col-sm-12">
-            <h2>Startup Landing Page <br> for your Product &<br> Services</h2>
+            <h2> SmaceDoc votre coffre-fort <br> numérique professionnel</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-md-7 col-sm-12">
-            <p class="mt-5"><strong class="text-uppercase">Try for Free</strong><span> - Just leave your e-mail below and we will get in touch</span></p>
+            <p class="mt-5"><strong class="text-uppercase">Recevez et importer consulter signer en ligne tous vos documents administratifs professionnels</strong></p>
           </div>
         </div>
       </div>
     </header>
- <div class="da-section bg-light" id="services">
-  <div class="da-services">
-    <div class="container text-center">
-      <div class="h3 pb-5 text-center" data-aos="fade-up">Our Services</div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6">
-          <div class="card mb-3">
-            <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="500">
-              <div class="text-primary"><i class="pb-3 fas fa-plus-square fa-3x"></i>
-                <p class="font-weight-bold">Add file</p>
-              </div>
+
+ <!-- ======= Services Section ======= -->
+ <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our services</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-plus-square"></i></div>
+              <h4><a href="">Add file</a></h4>
+              <p>Add file from your browser to the site</p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card mb-3">
-            <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="1000">
-            <div class="text-primary"><i class="pb-3 fas fa-folder-open fa-3x"></i>
-                <p class="font-weight-bold">Show file</p>
-              </div>
+
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-folder-open"></i></div>
+              <h4><a href="">Show file</a></h4>
+              <p>Show all the file you can import and consult the file</p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card mb-3">
-            <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="text-primary"><i class="pb-3 fas fa-share fa-3x"></i>
-                <p class="font-weight-bold">Send email</p>
-              </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-edit"></i></div>
+              <h4><a href="">Signer file</a></h4>
+              <p>Create the own signature and ipload it in file</p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card mb-3">
-            <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="2000">
-            <div class="text-primary"><i class="pb-3 fas fa-pencil-square-o fa-3x"></i>
-                <p class="font-weight-bold">Signer</p>
-              </div>
+
+          
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-share"></i></div>
+              <h4><a href="">Send email</a></h4>
+              <p>Send email to anthor colaborator</p>
             </div>
           </div>
+
         </div>
+
       </div>
-    </div>
-  </div>
-</div>
+    </section>
