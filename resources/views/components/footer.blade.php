@@ -5,8 +5,8 @@
 
   <!-- Section heading -->
   <div class="section-title">
-          <h2>Notre groupe </h2>
-        </div>
+        <h2>Notre groupe </h2>
+  </div>
 
   <!-- Section description -->
   <!-- Grid row -->
@@ -143,7 +143,7 @@
     <script src="/js/scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
     <script src="/js/scripts/parallax.min.js?ver=1.2.0"></script>
     <script src="/js/scripts/main.js?ver=1.2.0"></script>
-    <script src="js/main.js"></script>
+ 
     <script>
 $(document).ready(function(){
 

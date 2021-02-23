@@ -17,8 +17,8 @@
                 <hr>
                 <div id="canvasDiv"></div>
                 <br>
-                <button type="button" class="btn btn-info" id="">Save</button>
-                <button type="button" class="btn btn-outline-dark" id="reset-btn">Clear</button>
+                <button type="button" class="btn btn-danger" id="reset-btn">Clear</button>
+                <button type="button" class="btn btn-success" id="btn-save">Save</button>
             </div>
             <form id="signatureform" action="" style="display:none" method="post">
             @csrf
