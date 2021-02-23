@@ -22,7 +22,7 @@
 
 /**** Side bar****/
 #logo{
-    padding-left: 25px;
+    padding-left: 20px;
     height: 150px;
     width: 180px;
 }
@@ -57,7 +57,7 @@
       transition: all 0.3s ease;
   }
   .sideBar .navig li a:hover{
-      padding-left: 15px;
+      padding-left: 10px;
       color: #ff7f41; 
   }
 
