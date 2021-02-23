@@ -21,7 +21,10 @@ class UserController extends Controller
            $status="error";
            return view('login',compact('status'));
         }else{
-            if($user->id==1){
+           
+           
+              
+            if($user->id==4){
                 $req->session()->put('admin',$user);
                 return  redirect('ProfilAdmin');
               
@@ -31,9 +34,9 @@ class UserController extends Controller
             $req->session()->put('user',$user);
             
 
-             return  redirect('profile');}
-     }    
-}
+           
+             return  redirect('home');   }  
+}}
     public static function notification_list()
     {
     $admin = \App\Models\User::find(1);
@@ -101,7 +104,7 @@ class UserController extends Controller
        {
         $output = '
         <tr>
-         <td align="center" style="width: 565px;height:400px;" colspan="5">Aucune resultat</td>
+         <td align="center" style="width:619px;height:500px" colspan="8">Aucun resultat</td>
         </tr>
         ';
        }

@@ -270,5 +270,63 @@ class FileController extends Controller
 
 }
 
+    /***********Afficher les documents archivés**************/
+    function getArchivedDocs(){
+
+        $archivedDocs = DB::table('docarchives')->get();
+         
+         return view('showArchivedDocs',compact('archivedDocs'));
+      
+     }
+   /***********charcher dans les documents archivés**************/
+    function searchArchivedDocs(Request $request){
+        if($request->ajax())
+         {
+          $output = '';
+          $query = $request->get('query');
+          if($query != '')
+          {
+           $data = DB::table('docarchives')->where('name', 'like', '%'.$query.'%')->get();
+          }
+          else
+          {
+           $data = DB::table('docarchives')->get();
+          }
+          $total_row = $data->count();
+          if($total_row > 0)
+          {
+           foreach($data as $row)
+           {
+            $output .= '
+            <tr>
+             <td>'.$row->name.'</td>
+             <td><img src="'.$row->type.'"></td>
+             <td>'.$row->taille.'</td>
+             <td>'.$row->departement.'</td>
+             <td>'.$row->date.'</td>
+             <td><a href="files/'.$row->file.'"><button class="button" type="button"><i class="fas fa-eye"></i></i></button></a></td>
+             <td><a href="delete/'.$row->id.'"><button class="button" type="button"><i class="fas fa-trash"></i></button></a></td>
+            </tr>
+            ';
+           }
+          }
+          else
+          {
+           $output = '
+           <tr>
+            <td align="center" style="width:950px;height:500px;" colspan="8">Aucun résultat</td>
+           </tr>
+           ';
+          }
+          $data = array(
+           'table_data'  => $output,
+           'total_data'  => $total_row
+          );
+    
+          echo json_encode($data);
+         }
+
+    }
+
       
 }
