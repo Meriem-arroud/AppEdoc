@@ -4,7 +4,8 @@
     <title>Send Email</title>
 </head>
 <body>
-    <h1>{{$details['subject'] }}</h1>
+    <h2>Envoyer de la part de  Mme/M :{{ session('user')->nom}} {{ session('user')->prenom}} </h2>
+    <h1>Subject: {{$details['subject'] }}</h1>
     <p>{{$details['message']  }}</p>
     <p>Cordialement</p>
 </body>

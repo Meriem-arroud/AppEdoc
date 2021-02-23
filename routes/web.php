@@ -55,8 +55,10 @@ Route::get('/signer',[SignatureController::class,'signatureview']);
 Route::post('/signer',[SignatureController::class,'signer']);
  
 //***************************************************
+Route::get('addfileAdmin',[FileController::class,'indexAdmin'])->name('addfileAdmin');
+Route::post('addfileAdmin', [FileController::class,'store']);
 Route::get('getfileAdmin',[FileController::class,'getAdmin']);
-Route::get('getfileAdmin/search', [FileController::class,'searchAdmin'])->name('live_search.search');
+Route::get('getfileAdmin/search', [FileController::class,'searchAdmin'])->name('live_searchAdmin.search');
 Route::get('edit/{id_document}', [FileController::class,'editDocument']);
 Route::post('updatefile/{id_document}', [FileController::class,'upDateDocument']);
 Route::get('delete/{id_document}', [FileController::class,'deleteDocument']);

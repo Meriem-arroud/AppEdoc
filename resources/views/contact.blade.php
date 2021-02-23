@@ -28,7 +28,7 @@
                 <div class="row">
                   <div class="col">
                     <button class="btn btn-primary" type="submit">Send</button>
-                    <button type="submit" class="btn btn-outline-dark">Clear</button>
+                    <button type="reset" class="btn btn-outline-dark">Clear</button>
                   </div>
                 </div>
               </form>
