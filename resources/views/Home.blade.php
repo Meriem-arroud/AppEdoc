@@ -1,10 +1,13 @@
 <x-header/>
+
     <div class="page-content">
       <div>
 <div class="tf-work-section">
 <div class="section-title">
           <h2>Galerie </h2>
         </div>
+
+
 
   <div class="container">
     <div class="row">
