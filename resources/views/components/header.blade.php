@@ -36,7 +36,7 @@
           <h1><a class="navbar-brand" href="/">SMAC E-doc</a></h1>
           <div id="navbar">
             <ul class="nav pull-right">
-              <li class="nav-item"><a class="nav-link" href="logout">Log out</a></li>
+              <li class="nav-item"><a class="nav-link" href="logout">déconnecter</a></li>
             </ul>
           </div>
         </div>
@@ -54,28 +54,6 @@
         </div>
       </div>
     </header>
- <div class="da-section bg-light" id="services">
-  <div class="da-services">
-    <div class="container text-center">
-      <div class="h3 pb-5 text-center" data-aos="fade-up">Our Services</div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6">
-          <div class="card mb-3">
-            <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="500">
-              <div class="text-primary"><i class="pb-3 fas fa-plus-square fa-3x"></i>
-                <p class="font-weight-bold">Add file</p>
-              </div>
- <div class="da-section bg-light" id="services">
-  <div class="da-services">
-    <div class="container text-center">
-      <div class="h3 pb-5 text-center" data-aos="fade-up">Our Services</div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6">
-          <div class="card mb-3">
-            <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="500">
-              <div class="text-primary"><i class="pb-3 fas fa-plus-square fa-3x"></i>
-                <p class="font-weight-bold"><a href="addfile">Add file</a></p>
-              </div>
 
  <!-- ======= Services Section ======= -->
  <section id="services" class="services">
@@ -89,75 +67,33 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-plus-square"></i></div>
-              <h4><a href="">Ajouter document</a></h4>
+              <h4><a href="addfile">Ajouter document</a></h4>
               <p>Ajouter un fichier de votre serveur à l'application</p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card mb-3">
-            <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="1000">
-            <div class="text-primary"><i class="pb-3 fas fa-folder-open fa-3x"></i>
-                <p class="font-weight-bold">Show file</p>
-              </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card mb-3">
-            <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="1000">
-            <div class="text-primary"><i class="pb-3 fas fa-folder-open fa-3x"></i>
-                <p class="font-weight-bold"><a href="getfile">Show file</a></p>
-              </div>
 
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-folder-open"></i></div>
-              <h4><a href="">Afficher documents</a></h4>
+              <h4><a href="getfile">Afficher documents</a></h4>
               <p>Affichage des documents du département courant avec la possibilité d'importer et de consulter ces derniers </p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card mb-3">
-            <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="text-primary"><i class="pb-3 fas fa-share fa-3x"></i>
-                <p class="font-weight-bold">Send email</p>
-              </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card mb-3">
-            <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="text-primary"><i class="pb-3 fas fa-share fa-3x"></i>
-                <p class="font-weight-bold"><a href="contact">Send email</a></p>
-              </div>
 
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-edit"></i></div>
-              <h4><a href="">Signer document</a></h4>
+              <h4><a href="/signer">Signer document</a></h4>
               <p>Créé votre signature et l'ajouter dans un document </p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card mb-3">
-            <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="2000">
-            <div class="text-primary"><i class="pb-3 fas fa-pencil-square-o fa-3x"></i>
-                <p class="font-weight-bold">Signer</p>
-              </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card mb-3">
-            <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="2000">
-            <div class="text-primary"><i class="pb-3 fas fa-pencil-square-o fa-3x"></i>
-                <p class="font-weight-bold"><a href="signer">Signer</a></p>
-              </div>
 
           
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-share"></i></div>
-              <h4><a href="">Envoyer document</a></h4>
+              <h4><a href="/contact">Envoyer document</a></h4>
               <p>Partager des document avec les utilisateurs de l'application via email</p>
             </div>
           </div>

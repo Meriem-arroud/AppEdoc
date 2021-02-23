@@ -8,11 +8,24 @@
         h1{
   margin-top:20px;
   margin-bottom:30px;
+ margin-right:50px;
+  color:#FF7F41FF;
+}
+.btn-success{
+border-color:#FF7F41FF;
+  background-color:#FF7F41FF;
+}
+.btn-outline-dark{
+  border-color:#DCDCDC;
+  background-color:#DCDCDC;
 }
     </style>
 </head>
 <body>
-<h1 class="text-center">Sign File</h1>
+<div class="section-title">
+          <h2>Signer document </h2>
+        </div>
+
 <div class="container">
 <div class="row">
 <div class="col-md-3"></div>
@@ -22,7 +35,7 @@
                 
                 <div id="canvasDiv"></div>
                 <br>
-                <button type="button" class="btn btn-info" id="">Save</button>
+                <button type="button" class="btn btn-success" id="btn-save">Save</button>
                 <button type="button" class="btn btn-outline-dark" id="reset-btn">Clear</button>
             </div>
             <form id="signatureform" action="" style="display:none" method="post">

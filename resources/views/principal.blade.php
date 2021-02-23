@@ -7,12 +7,20 @@
 h1{
   margin-top:20px;
   margin-bottom:30px;
+
+  color:#FF7F41FF;
+
+
 }
 
 </style>
 <body>
 </br></br>
-<h1 class="text-center">Search for a file</h1>
+
+<div class="section-title">
+          <h2>Afficher documents</h2>
+        </div>
+
 <div class="container box">
     <div class="panel-body">
     <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
