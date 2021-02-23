@@ -59,8 +59,6 @@ class FileController extends Controller
         $file->date= NOW();
         
         $file->save();
-       
-       // return redirect()->route('addfile');
        return redirect()->back()->with('succes_added','Le document est bien ajouté!!');
 
        }
