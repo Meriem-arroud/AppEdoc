@@ -18,7 +18,7 @@ use \App\Http\Controllers\UserController;
           <span class="badge rounded-pill badge-notification bg-danger">{{UserController::count_notifications()}}</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <li><a style="color:#fe4066;font-weight:bold;" class="dropdown-item" href="{{route('markRead')}}">Marquer Tout Comme Lu</a></li>
+          <li><a style="color:#ff7f41;font-weight:bold;" class="dropdown-item" href="{{route('markRead')}}">Marquer Tout Comme Lu</a></li>
             {{ UserController::notification_list() }}
           </ul>
         </li>

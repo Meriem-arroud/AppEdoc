@@ -1,7 +1,9 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
  <head>
+ <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Affichage des documents</title>
   <!-- Style -->
   <link rel="stylesheet"  type="text/css" href="/css/affichage.css"/>
@@ -24,7 +26,7 @@
                 <h2>Documents</h2>
         </div>
      <div class="form-group">
-     <input type="text" name="search" id="search" class="form-control" placeholder="Chercher des fichiers ...." />
+     <input type="text" name="search" id="search" class="form-control" placeholder="Chercher des documents ...." />
      </div>
       <!-- <h3>Total des fichiers : <span id="total_records"></span></h3> -->
       <table align="center" >
