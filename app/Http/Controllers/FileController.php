@@ -182,7 +182,7 @@ class FileController extends Controller
      return redirect()->back();
 
      $id->delete();
-     return redirect()->back()->with('succes_delete','Le document est bien supprimer!!');
+     return redirect()->back()->with('succes_delete','Le document est bien supprimé!!');
       
      }   
      //**************************search for documents admin******************************************

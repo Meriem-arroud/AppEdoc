@@ -23,10 +23,10 @@ use \App\Http\Controllers\UserController;
           </ul>
         </li>
         <li style="padding-right:20px" class="nav-item">
-          <a class="nav-link" href="#"> <i style="padding-right:10px" class="fas fa-user-tie"></i>Bonjour Admin</a>
+          <a class="nav-link" href="#" > <i style="padding-right:10px ;" class="fas fa-user-tie"></i>Bonjour Admin</a>
         </li>
         <li class="nav-item">
-          <a id="logoutBtn" class="nav-link" href="#"><i style="padding-right:10px" class="fas fa-sign-out-alt"></i>Se déconnecter</a>
+          <a id="logoutBtn"  class="nav-link" href="#"><i style="padding-right:10px;" class="fas fa-sign-out-alt"></i>Se déconnecter</a>
         </li>
       </ul>
     </div>

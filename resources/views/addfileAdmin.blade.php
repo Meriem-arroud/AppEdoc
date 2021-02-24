@@ -32,7 +32,7 @@
      <span class="text">Choisir un fichier</span>
      <span class="line">
      @error('fichier')
-       <center> <small class="form-text text-danger" style="color: red;">{{$message}}</small></center>
+       <center> <span class="form-text text-danger" style="size:40px;color: red;">{{$message}}</span></center>
       @enderror
      </span>
      </div>
