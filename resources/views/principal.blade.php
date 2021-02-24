@@ -2,15 +2,11 @@
 <style>
 .form-control:focus {
   box-shadow: none;
-
 }
 h1{
   margin-top:20px;
   margin-bottom:30px;
-
   color:#FF7F41FF;
-
-
 }
 
 </style>
@@ -25,7 +21,7 @@ h1{
     <div class="panel-body">
     <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
             <div class="input-group">
-              <input type="text" name="search" id="search" placeholder="Chercher un fichier....." aria-describedby="button-addon1" class="form-control border-0 bg-light">
+              <input type="text" name="search" id="search" placeholder="Chercher un document....." aria-describedby="button-addon1" class="form-control border-0 bg-light">
               <div class="input-group-append">
                 <button id="button-addon1" type="submit" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
               </div>

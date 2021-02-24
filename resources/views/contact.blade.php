@@ -1,7 +1,4 @@
 <x-header />
-<body>
-
-
 <style>
 h1{
   margin-top:20px;

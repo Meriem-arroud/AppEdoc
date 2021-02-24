@@ -33,10 +33,11 @@
     <header class="tf-header" data-parallax="scroll" data-image-src="images/h4.PNG">
       <nav class="navbar py-5 navbar-dark">
         <div class="container">
-          <h1><a class="navbar-brand" href="/">SMAC E-doc</a></h1>
+          <h1><a class="navbar-brand" href="/"><img src="img/logo1.png" width="120" height="90" /></a></h1>
           <div id="navbar">
             <ul class="nav pull-right">
-              <li class="nav-item"><a class="nav-link" href="logout">Déconnecter</a></li>
+            <li class="nav-item"><a class="nav-link" href="home">Accueil</a></li>
+              <li class="nav-item"><a class="nav-link" href="logout">Déconnexion</a></li>
             </ul>
           </div>
         </div>
@@ -44,7 +45,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7 col-sm-12">
-            <h2> Smac eDoc votre coffre-fort <br> numérique professionnel</h2>
+            <h2> Smace-Doc votre coffre-fort <br> numérique professionnel</h2>
           </div>
         </div>
         <div class="row">
