@@ -48,6 +48,14 @@
 <!-- Javascript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
+
+@if(Session::has('succes_delete'))
+ <script>
+   swal("Bien fait!","{!! Session::get('succes_delete')!!}"),{
+  button:"OK",
+   }
+ </script>
+  @endif
 <script>
 $(document).ready(function(){
 
