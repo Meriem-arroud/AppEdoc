@@ -32,6 +32,8 @@ Route::post('/loginadmin', [AdminController::class,'login']);
 Route::view('ProfilAdmin', 'ProfilAdmin');
 Route::view('profile','profile');
 Route::view('vue','vue');
+
+Route::view('vue','vue');
 //Route::view('principal','principal');
 
 Route::get('logout', function () {

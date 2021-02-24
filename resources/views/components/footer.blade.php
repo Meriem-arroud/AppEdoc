@@ -1,37 +1,12 @@
-<div class="tf-quotes-section">
-  <div class="carousel slide mt-5" id="tf-carousel" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li class="active" data-target="#tf-carousel" data-slide-to="0"></li>
-      <li data-target="#tf-carousel" data-slide-to="1"></li>
-      <li data-target="#tf-carousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active" style="background-image: url('/images/h8.PNG');">
-        <div class="carousel-caption">
-          <p class="slider-text-2">Assure la sécurité des document<br> dans la société</p>
-        </div>
-      </div>
-      <div class="carousel-item" style="background-image: url('/images/h9.PNG');">
-        <div class="carousel-caption">
-          <p class="slider-text-2">Communication fiable entre les membres <br> de la société </p>
-        </div>
-      </div>
-      <div class="carousel-item" style="background-image: url('/images/h2.PNG');">
-        <div class="carousel-caption">
-          <p class="slider-text-2">Gestion utiles des  <br>documents</p>
-        </div>
-      </div>
-    </div><a class="carousel-control-prev" href="#tf-carousel" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#tf-carousel" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-  </div>
-</div>
+
 <div class="tf-contact-section">
 
   <section class="team-section text-center my-5">
 
   <!-- Section heading -->
   <div class="section-title">
-          <h2>Notre groupe </h2>
-        </div>
+        <h2>Notre groupe </h2>
+  </div>
 
   <!-- Section description -->
   <!-- Grid row -->
@@ -168,7 +143,7 @@
     <script src="/js/scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
     <script src="/js/scripts/parallax.min.js?ver=1.2.0"></script>
     <script src="/js/scripts/main.js?ver=1.2.0"></script>
-    <script src="js/main.js"></script>
+ 
     <script>
 $(document).ready(function(){
 

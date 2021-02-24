@@ -12,7 +12,7 @@
   color:#FF7F41FF;
 }
 .btn-success{
-  border-color:#FF7F41FF;
+border-color:#FF7F41FF;
   background-color:#FF7F41FF;
 }
 .btn-outline-dark{

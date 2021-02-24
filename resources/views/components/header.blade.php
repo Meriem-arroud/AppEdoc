@@ -33,10 +33,11 @@
     <header class="tf-header" data-parallax="scroll" data-image-src="images/h4.PNG">
       <nav class="navbar py-5 navbar-dark">
         <div class="container">
-          <h1><a class="navbar-brand" href="/">SMAC E-doc</a></h1>
+          <h1><a class="navbar-brand" href="/"><img src="img/logo1.png" width="120" height="90" /></a></h1>
           <div id="navbar">
             <ul class="nav pull-right">
-              <li class="nav-item"><a class="nav-link" href="#contact">Log in</a></li>
+            <li class="nav-item"><a class="nav-link" href="home">Accueil</a></li>
+              <li class="nav-item"><a class="nav-link" href="logout">Déconnexion</a></li>
             </ul>
           </div>
         </div>
@@ -44,7 +45,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7 col-sm-12">
-            <h2> Smac eDoc votre coffre-fort <br> numérique professionnel</h2>
+            <h2> Smace-Doc votre coffre-fort <br> numérique professionnel</h2>
           </div>
         </div>
         <div class="row">
@@ -67,7 +68,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-plus-square"></i></div>
-              <h4><a href="">Ajouter document</a></h4>
+              <h4><a href="addfile">Ajouter document</a></h4>
               <p>Ajouter un fichier de votre serveur à l'application</p>
             </div>
           </div>
@@ -76,7 +77,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-folder-open"></i></div>
-              <h4><a href="">Afficher documents</a></h4>
+              <h4><a href="getfile">Afficher documents</a></h4>
               <p>Affichage des documents du département courant avec la possibilité d'importer et de consulter ces derniers </p>
             </div>
           </div>
@@ -84,7 +85,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-edit"></i></div>
-              <h4><a href="">Signer document</a></h4>
+              <h4><a href="/signer">Signer document</a></h4>
               <p>Créé votre signature et l'ajouter dans un document </p>
             </div>
           </div>
@@ -93,7 +94,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-share"></i></div>
-              <h4><a href="">Envoyer document</a></h4>
+              <h4><a href="/contact">Envoyer document</a></h4>
               <p>Partager des document avec les utilisateurs de l'application via email</p>
             </div>
           </div>
