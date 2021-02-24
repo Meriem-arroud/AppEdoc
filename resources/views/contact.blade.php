@@ -1,7 +1,5 @@
 <x-header />
-<body>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
 <style>
 h1{
   margin-top:20px;
@@ -18,7 +16,13 @@ border-color:#FF7F41FF;
   background-color:#DCDCDC;
 }
 </style>
-
+@if(Session::has('succes_send'))
+ <script>
+   swal("Bien fait!","{!! Session::get('succes_added')!!}"),{
+  button:"OK",
+   }
+ </script>
+  @endif
 <div class="section-title">
           <h2>Partager document</h2>
         </div>
@@ -50,7 +54,7 @@ border-color:#FF7F41FF;
                 </div>
                 <div class="row">
                   <div class="col">
-                    <button class="btn btn-success" type="submit">Sauvegarde</button>
+                    <button class="btn btn-success" type="submit">Envoyer</button>
                     <button type="reset" class="btn btn-outline-dark">Annuler</button>
                   </div>
                 </div>
