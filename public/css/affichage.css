@@ -63,8 +63,8 @@ tbody tr td{
 
 }
 .button:hover{
-    /* background-color: #fe4066;
-    color: #fff; */
+     background-color: #fff;
+    color: #000; 
     transform: scale(1.2);
 }
 a:link 

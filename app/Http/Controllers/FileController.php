@@ -184,7 +184,7 @@ class FileController extends Controller
      return redirect()->back();
 
      $id->delete();
-     return redirect()->back()->with('succes_delete','Le document est bien supprimer!!');
+     return redirect()->back()->with('succes_delete','Le document est bien supprimé!!');
       
      }   
      //**************************search for documents admin******************************************
@@ -305,7 +305,7 @@ class FileController extends Controller
              <td>'.$row->departement.'</td>
              <td>'.$row->date.'</td>
              <td><a href="files/'.$row->file.'"><button class="button" type="button"><i class="fas fa-eye"></i></i></button></a></td>
-             <td><a href="delete/'.$row->id.'"><button class="button" type="button"><i class="fas fa-trash"></i></button></a></td>
+             <td><a href="deleteArchive/'.$row->id.'"><button class="button" type="button"><i class="fas fa-trash"></i></button></a></td>
             </tr>
             ';
            }
@@ -327,6 +327,19 @@ class FileController extends Controller
          }
 
     }
+
+     //********************delete archived document**************************************************
+     function deleteArchivedDoc($id_doc)
+     {
+      $id=Docarchive::find($id_doc);//check if this id exists in database
+      
+     if(!$id)
+     return redirect()->back();
+
+     $id->delete();
+     return redirect()->back()->with('succes_delete','Le document est bien supprimé!!');
+      
+     }   
 
       
 }

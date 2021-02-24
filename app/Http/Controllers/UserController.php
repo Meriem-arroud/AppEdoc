@@ -24,7 +24,7 @@ class UserController extends Controller
            
            
               
-            if($user->id==4){
+            if($user->id==1){
                 $req->session()->put('admin',$user);
                 return  redirect('ProfilAdmin');
               
