@@ -24,7 +24,7 @@
 <body>
 <div class="section-title">
           <h2>Signer document </h2>
-        </div>
+ </div>
 
 <div class="container">
 <div class="row">
@@ -44,7 +44,10 @@
                 <input type="hidden" name="signaturesubmit" value="1">
             </form>
         </div>
-    </div></div></div></div>
+    </div>
+    </div>
+    </div>
+    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>

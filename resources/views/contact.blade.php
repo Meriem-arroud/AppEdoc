@@ -23,9 +23,11 @@ border-color:#FF7F41FF;
    }
  </script>
   @endif
+  </head>
+  <body>
 <div class="section-title">
-          <h2>Partager document</h2>
-        </div>
+     <h2>Partager document</h2>
+</div>
 
 <div class="container">
             <div class="row">
@@ -60,8 +62,7 @@ border-color:#FF7F41FF;
                 </div>
               </form>
          </div>
-       </div>
-        </div>
-        </body>
-     
-        <x-footer />
+     </div>
+</div>
+</body>
+ <x-footer />
