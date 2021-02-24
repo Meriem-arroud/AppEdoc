@@ -15,13 +15,13 @@
       <div class="carousel-item" style="background-image: url('/images/s3.PNG');">
         <div class="carousel-caption">
         <p class="slider-text-2">Ergonomique </p>
-          <p class="slider-text-1">" L’application mobile est conçue pour une navigation fluide et optimisée,<br> Vous pouvez facilement centraliser vos documents administratifs dans votre coffre-fort numérique."</p>
+          <p class="slider-text-1">" L’application mobile est conçue <br> pour une navigation fluide et optimisée,Vous pouvez facilement centraliser vos <br> documents administratifs dans votre coffre-fort numérique."</p>
         </div>
       </div>
       <div class="carousel-item" style="background-image: url('/images/s2.PNG');">
         <div class="carousel-caption">
         <p class="slider-text-2">A valeur d’original</p>
-          <p class="slider-text-1">" Dès que le bulletin de salaire est versé dans le coffre-fort numérique du salarié,<br>  il devient un original, au même titre que l’exemplaire papier."</p>
+          <p class="slider-text-1">" Dès que le bulletin de salaire est versé dans <br>  le coffre-fort numérique du salarié,  <br> il devient un original, au même titre que l’exemplaire papier."</p>
         </div>
       </div>
     </div><a class="carousel-control-prev" href="#tf-carousel" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#tf-carousel" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
