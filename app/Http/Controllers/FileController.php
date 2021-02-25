@@ -103,11 +103,11 @@ class FileController extends Controller
             $output .= '
             <tr>
             <td>'.$row->name.'</td>
-            <td><img src="'.$row->type.'"></td>
+            <td><img src="'.$row->type.'"width="40" height="40"></td>
             <td>'.$row->departement.'</td>
             <td>'.$row->date.'</td>
-            <td><a href="dar/'.$row->file.'"><img src="images/download.png" width="45" height="45"></a></td>
-            <td><a href="files/'.$row->file.'"><img src="images/view.png" width="45" height="45"></a></td>
+            <td><a href="dar/'.$row->file.'"><img src="images/d.png" width="45" height="45"></a></td>
+            <td><a href="files/'.$row->file.'"><img src="images/c.png" width="45" height="45"></a></td>
             </tr>
             ';
         }
@@ -303,7 +303,7 @@ class FileController extends Controller
              <td>'.$row->departement.'</td>
              <td>'.$row->date.'</td>
              <td><a href="files/'.$row->file.'"><button class="button" type="button"><i class="fas fa-eye"></i></i></button></a></td>
-             <td><a href="delete/'.$row->id.'"><button class="button" type="button"><i class="fas fa-trash"></i></button></a></td>
+             <td><a href="deleteArchive/'.$row->id.'"><button class="button" type="button"><i class="fas fa-trash"></i></button></a></td>
             </tr>
             ';
            }
@@ -325,6 +325,19 @@ class FileController extends Controller
          }
 
     }
+
+     //********************delete archived document**************************************************
+     function deleteArchivedDoc($id_doc)
+     {
+      $id=Docarchive::find($id_doc);//check if this id exists in database
+      
+     if(!$id)
+     return redirect()->back();
+
+     $id->delete();
+     return redirect()->back()->with('succes_delete','Le document est bien supprimé!!');
+      
+     }   
 
       
 }

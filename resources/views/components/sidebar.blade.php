@@ -4,7 +4,7 @@
     <a href="#"><img src="/img/logo.png" alt="logo" id="logo"/></a>
       <!--Navigation bar-->
         <ul class="navig">
-            <li><a href="#"><i class="fas fa-home"></i>Accueil</i></a></li>
+            <li><a href="ProfilAdmin"><i class="fas fa-home"></i>Accueil</i></a></li>
             <li><a href="addfileAdmin"><i class="fas fa-plus-circle"></i>Ajouter Document</i></a></li>
             <li><a href="getfileAdmin"><i class="fas fa-file-alt"></i>Documents</i></a></li>
             <li><a href="getUsers"><i class="fas fa-users"></i>Employés</i></a></li>
@@ -13,7 +13,7 @@
       <!--Navigation bar end-->
        <!--Copyright-->
        <div class="copyright">
-        Copyright 2021&copy;Developed By SMACeDOC Team
+        Copyright 2021&copy;Application développée par le groupe SMACeDOC
       </div>
       <!--Copyright end-->
 <!-- End SideBar -->

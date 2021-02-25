@@ -52,7 +52,7 @@ h2{
   
   }
   #form1.invalid input{
-    border-color:red ;
+    border-color: red;
     background:url(delete.png) ;
     background-repeat: no-repeat;
     background-position-x: right;

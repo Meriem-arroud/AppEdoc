@@ -32,6 +32,8 @@ Route::post('/loginadmin', [AdminController::class,'login']);
 Route::view('ProfilAdmin', 'ProfilAdmin');
 Route::view('profile','profile');
 Route::view('vue','vue');
+
+Route::view('vue','vue');
 //Route::view('principal','principal');
 
 Route::get('logout', function () {
@@ -65,6 +67,7 @@ Route::get('delete/{id_document}', [FileController::class,'deleteDocument']);
 Route::get('archive/{id}', [FileController::class,'archiverDoc']);
 Route::get('getArchivedDocs', [FileController::class,'getArchivedDocs']);
 Route::get('getArchivedDocs/search', [FileController::class,'searchArchivedDocs'])->name('SearchArchivedDocs.search');
+Route::get('deleteArchive/{id_doc}', [FileController::class,'deleteArchivedDoc']);
 //***************************************************
 
 Route::get('getUsers', [UserController::class,'getUsers']);
@@ -75,6 +78,11 @@ Route::get('markAsRead',function(){
     $admin->unreadNotifications->markAsRead();
     return redirect()->back();
 })->name('markRead');
+
+Route::get('adminLogout', function () {
+    session()->forget('admin');
+    return view('login');
+});
 
 
 
