@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Smac E-doc</title>
+    <title>SMAC-e-DOC</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap" media="print" onload="this.media='all'"/>
@@ -45,7 +45,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7 col-sm-12">
-            <h2> Smace-Doc votre coffre-fort <br> numérique professionnel</h2>
+            <h2> SMAC-e-DOC votre coffre-fort <br> numérique professionnel</h2>
           </div>
         </div>
         <div class="row">

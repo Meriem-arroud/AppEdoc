@@ -9,7 +9,7 @@
       <div class="carousel-item active" style="background-image: url('/images/s1.PNG');">
         <div class="carousel-caption">
           <p class="slider-text-2">Mobile</p>
-          <p class="slider-text-1">"Smac e-Doc est accessible depuis votre ordinateur,<br> votre tablette ou votre smartphone. <br>La version mobile est disponible en téléchargement gratuit sur les stores Apple ou Android.."</p>
+          <p class="slider-text-1">"SMAC-e-DOC est accessible depuis votre ordinateur,<br> votre tablette ou votre smartphone. <br>La version mobile est disponible en téléchargement gratuit sur les stores Apple ou Android.."</p>
         </div>
       </div>
       <div class="carousel-item" style="background-image: url('/images/s3.PNG');">
@@ -151,12 +151,12 @@
     <div class="container text-white">
         <div class="row">
           <div class="col-md-5">
-            <div class="h2 mb-4">Smac E-doc</div>
+            <div class="h2 mb-4">SMAC-e-DOC</div>
             <p class="mb-3">smacedoc.ensah@gmail.com</p>
             <p>+212 6 12432165</p>
           </div>
           <div class="col-md-4">
-            <div class="h6 pb-2">Follow Us</div>
+            <div class="h6 pb-2">Suivez-Nous</div>
             <ul>
               <li class="mb-1"><a class="da-social-link" href="#"><i class="fab fa-twitter" aria-hidden="true"></i><span class="ml-2">Twitter</span></a></li>
               <li class="mb-1"><a class="da-social-link" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="ml-2">Facebook</span></a></li>

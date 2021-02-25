@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Affichage des documents</title>
   <!-- Style -->
-  <link rel="stylesheet"  type="text/css" href="/css/affichage.css"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet"  type="text/css" href="/css/affichage.css"/>
   <link href="/css/admin.css" rel="stylesheet">
    <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/cbb8fa204a.js" crossorigin="anonymous"></script>
-  
+
  </head>
  <body>
    <!--Navbar-->
@@ -25,10 +25,11 @@
         <div class="title padding-15">
                 <h2>Documents</h2>
         </div>
-     <div class="form-group">
-     <input type="text" name="search" id="search" class="form-control" placeholder="Chercher des documents ...." />
+
+     <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
+        <input type="text" name="search" id="search" class="form-control" placeholder="Chercher un document ...." aria-label="Username" aria-describedby="addon-wrapping">
      </div>
-      <!-- <h3>Total des fichiers : <span id="total_records"></span></h3> -->
       <table align="center" >
       <thead >
       <tr>
@@ -46,12 +47,19 @@
             <tbody>
             </tbody>
       </table>
-</section>   
+</section>
 </div>
 <!-- Javascript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
 
+@if(Session::has('succes_update'))
+ <script>
+   swal("Bien fait!","{!! Session::get('succes_update')!!}"),{
+  button:"OK",
+   }
+ </script>
+  @endif
 @if(Session::has('succes_delete'))
  <script>
    swal("Bien fait!","{!! Session::get('succes_delete')!!}"),{
@@ -65,7 +73,7 @@
   button:"OK",
    }
  </script>
-  @endif  
+  @endif
 
 <script>
 $(document).ready(function(){

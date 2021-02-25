@@ -10,17 +10,16 @@
     padding-left: 50px;
 }
 #logoutBtn{
-    /* background-color: #BDBDBD; */
    margin-left:150px;
    padding: 10px;
    border: 2px solid #ff7f41;
    border-radius: 50px;
+   background-color: #fff;
 }
 #logoutBtn:hover{
     background-color: #ff7f41;
    color: #fff;
 }
-
 /**** Side bar****/
 #logo{
     padding-left: 20px;
