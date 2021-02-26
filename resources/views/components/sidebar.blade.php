@@ -13,7 +13,7 @@
       <!--Navigation bar end-->
        <!--Copyright-->
        <div class="copyright">
-        Copyright 2021&copy;Application développée par le groupe SMACeDOC
+       SMAC-e-DOC&copy;Copyright 2021-Développée par le groupe SMAC
       </div>
       <!--Copyright end-->
 <!-- End SideBar -->

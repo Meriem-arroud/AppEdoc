@@ -1,4 +1,4 @@
-<x-header />
+<x-barre-navig />
 <body>
 
 
@@ -17,6 +17,12 @@ border-color:#FF7F41FF;
 .btn-outline-dark{
   border-color:#DCDCDC;
   background-color:#DCDCDC;
+}
+h4 a{
+  text-decoration:none;
+}
+.navbar{
+  margin-bottom:55px;
 }
 </style>
 @if(Session::has('succes_send'))
@@ -67,5 +73,6 @@ border-color:#FF7F41FF;
          </div>
      </div>
 </div>
-</body>
- <x-footer />
+  <x-services/>   
+  <x-smallfooter />
+

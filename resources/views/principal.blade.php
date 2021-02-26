@@ -1,4 +1,4 @@
-<x-header />
+<x-barre-navig />
 <style>
 .form-control:focus {
   box-shadow: none;
@@ -8,7 +8,12 @@ h1{
   margin-bottom:30px;
   color:#FF7F41FF;
 }
-
+h4 a{
+  text-decoration:none;
+}
+.navbar{
+  margin-bottom:15px;
+}
 </style>
 <body>
 </br></br>
@@ -61,4 +66,8 @@ h1{
    </div>
    
    </div>
-   <x-footer />
+
+ <div style="height:20px"></div>
+  <x-services/>   
+
+  <x-smallfooter />

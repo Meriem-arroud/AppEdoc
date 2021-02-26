@@ -1,4 +1,4 @@
-<x-header />
+<x-barre-navig />
     <style>
         #canvasDiv{
             position: relative;
@@ -19,6 +19,9 @@
   border-color:#DCDCDC;
   background-color:#DCDCDC;
 }
+h4 a{
+  text-decoration:none;
+}
     </style>
 </head>
 <body>
@@ -35,8 +38,8 @@
                 
                 <div id="canvasDiv"></div>
                 <br>
-                <button type="button" class="btn btn-success" id="btn-save">Save</button>
-                <button type="button" class="btn btn-outline-dark" id="reset-btn">Clear</button>
+                <button type="button" class="btn btn-success" id="btn-save">Sauvegarder</button>
+                <button type="button" class="btn btn-outline-dark" id="reset-btn">Vider</button>
             </div>
             <form id="signatureform" action="" style="display:none" method="post">
             @csrf
@@ -192,4 +195,7 @@
     })
 
 </script>
-<x-footer />
+<div style="height:20px"></div>
+  <x-services/>   
+
+  <x-smallfooter />
