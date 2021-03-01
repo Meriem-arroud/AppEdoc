@@ -1,8 +1,12 @@
-<x-header />
-<body>
-
-
+<x-barre-navig />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
+ @if(Session::has('succes_send'))
+ <script>
+   swal("Bien fait!","{!! Session::get('succes_send')!!}"),{
+  button:"OK",
+   }
+ </script>
+  @endif
 <style>
 h1{
   margin-top:20px;
@@ -18,16 +22,15 @@ border-color:#FF7F41FF;
   border-color:#DCDCDC;
   background-color:#DCDCDC;
 }
+h4 a{
+  text-decoration:none;
+}
+.navbar{
+  margin-bottom:55px;
+}
 </style>
-@if(Session::has('succes_send'))
- <script>
-   swal("Bien fait!","{!! Session::get('succes_added')!!}"),{
-  button:"OK",
-   }
- </script>
-  @endif
-  </head>
-  <body>
+</head>
+<body>
 <div class="section-title">
      <h2>Partager document</h2>
 </div>
@@ -39,7 +42,7 @@ border-color:#FF7F41FF;
                 @csrf
                 <div class="row mb-3">
                   <div class="col">
-                    <input class="form-control" type="text" name="subject"   placeholder="*Subject" required="required"/>
+                    <input class="form-control" type="text" name="subject"   placeholder="*Sujet" autocomplete="off" required="required"/>
                   </div>
                 </div>
                 <div class="row mb-3 ">
@@ -49,7 +52,7 @@ border-color:#FF7F41FF;
                 </div>
                 <div class="row mb-3">
                   <div class="col">
-                    <textarea class="form-control" name="message"    placeholder="*Your Message" rows="5" required="required"></textarea>
+                    <textarea class="form-control" name="message"  placeholder="*Votre message" rows="5" required="required"></textarea>
                   </div>
                 </div>
                 <div class="row mb-3">
@@ -67,5 +70,6 @@ border-color:#FF7F41FF;
          </div>
      </div>
 </div>
-</body>
- <x-footer />
+  <x-services/>   
+  <x-smallfooter />
+

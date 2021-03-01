@@ -1,4 +1,4 @@
-<x-header />
+<x-barre-navig />
 <style>
 .form-control:focus {
   box-shadow: none;
@@ -8,7 +8,12 @@ h1{
   margin-bottom:30px;
   color:#FF7F41FF;
 }
-
+h4 a{
+  text-decoration:none;
+}
+.navbar{
+  margin-bottom:15px;
+}
 </style>
 <body>
 </br></br>
@@ -37,8 +42,8 @@ h1{
 								<tr class="row200 head">
 									<th class="cell100 column1">Titre du fichier</th>
 									<th class="cell100 column2">Type</th>
-									<th class="cell100 column3">Departement</th>
-									<th class="cell100 column4">Date</th>
+									<th class="cell100 column3">Département</th>
+									<th class="cell100 column4">Date d'ajout</th>
 									<th class="cell100 column5">Importer</th>
 									<th class="cell100 column5">Consulter</th>
 								</tr>
@@ -61,4 +66,8 @@ h1{
    </div>
    
    </div>
-   <x-footer />
+
+ <div style="height:20px"></div>
+  <x-services/>   
+
+  <x-smallfooter />

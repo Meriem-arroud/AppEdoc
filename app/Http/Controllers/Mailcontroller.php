@@ -18,6 +18,6 @@ class Mailcontroller extends Controller
             'file' =>$request->file('docx')
         ];
         \Mail::to($details["email"])->send(new \App\Mail\SendMail($details));
-        return view('emails.thanks');
+        return redirect()->back()->with('succes_send','Le document est bien envoyé!!');
     }
 }
