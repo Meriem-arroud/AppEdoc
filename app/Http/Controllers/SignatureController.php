@@ -16,10 +16,9 @@ class SignatureController extends Controller
        $signature = str_replace('data:image/png;base64,', '', $signature);
        $signature = str_replace(' ', '+', $signature);
        $data = base64_decode($signature);
-       $file = 'C:\xampp\htdocs\laravel\project\signatures/'.$signatureFileName;
+       $file = 'C:\Users\hp\Desktop/'.$signatureFileName;
        file_put_contents($file, $data);
-       $msg = "<div class='alert alert-success'>Signature Uploaded</div>";
-         echo "Votre signature est bien sauvgarder";
+       return redirect()->back()->with('succes_sign','la signature est bien sauvegardé!!');
     }
     }
 }

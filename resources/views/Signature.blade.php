@@ -1,4 +1,12 @@
-<x-header />
+<x-barre-navig />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
+ @if(Session::has('succes_sign'))
+ <script>
+   swal("Bien fait!","{!! Session::get('succes_sign')!!}"),{
+  button:"OK",
+   }
+ </script>
+  @endif
     <style>
         #canvasDiv{
             position: relative;
@@ -19,6 +27,9 @@
   border-color:#DCDCDC;
   background-color:#DCDCDC;
 }
+h4 a{
+  text-decoration:none;
+}
     </style>
 </head>
 <body>
@@ -30,13 +41,10 @@
 <div class="row">
 <div class="col-md-3"></div>
 <div class="col-md-5" >
-                <?php echo isset($msg)?$msg:''; ?>
-                
-                
                 <div id="canvasDiv"></div>
                 <br>
-                <button type="button" class="btn btn-success" id="btn-save">Save</button>
-                <button type="button" class="btn btn-outline-dark" id="reset-btn">Clear</button>
+                <button type="button" class="btn btn-success" id="btn-save">Sauvegarder</button>
+                <button type="button" class="btn btn-outline-dark" id="reset-btn">Vider</button>
             </div>
             <form id="signatureform" action="" style="display:none" method="post">
             @csrf
@@ -192,4 +200,7 @@
     })
 
 </script>
-<x-footer />
+<div style="height:20px"></div>
+  <x-services/>   
+
+  <x-smallfooter />

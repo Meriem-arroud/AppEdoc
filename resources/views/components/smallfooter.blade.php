@@ -1,33 +1,7 @@
-<div class="tf-quotes-section">
-  <div class="carousel slide mt-5" id="tf-carousel" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li class="active" data-target="#tf-carousel" data-slide-to="0"></li>
-      <li data-target="#tf-carousel" data-slide-to="1"></li>
-      <li data-target="#tf-carousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
 
-    <div class="carousel-item active" style="background-image: url('/images/s3.PNG');">
-        <div class="carousel-caption">
-          <p class="slider-text-2">" SMAC-e-DOC, éditeur de solutions de <br>coffre-fort numérique ."</p>
-        </div>
-      </div>
-      <div class="carousel-item " style="background-image: url('/images/s1.PNG');">
-        <div class="carousel-caption">
-          <p class="slider-text-1">"Rejoignez une équipe <br> dynamique !"</p>
-        </div>
-      </div>      
-      <div class="carousel-item" style="background-image: url('/images/s2.PNG');">
-        <div class="carousel-caption">
-          <p class="slider-text-1">" Solution de dématérialisation <br>sécurisée ."</p>
-        </div>
-      </div>
-    </div><a class="carousel-control-prev" href="#tf-carousel" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#tf-carousel" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-  </div>
-</div>
+</section>
 
-  
-    <footer class="bg-dark py-4 mt-5 tf-footer">
+<footer class="bg-dark py-4 mt-5 tf-footer">
     <div class="container text-white">
         <div class="row">
           <div class="col-md-5">
@@ -51,7 +25,7 @@
     <script src="/js/scripts/parallax.min.js?ver=1.2.0"></script>
     <script src="/js/scripts/main.js?ver=1.2.0"></script>
  
-<script>
+    <script>
 $(document).ready(function(){
 
  fetch_customer_data();

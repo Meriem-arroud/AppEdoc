@@ -1,4 +1,4 @@
-<x-header />
+<x-barre-navig />
 
 <link rel="stylesheet"  type="text/css" href="/css/affichage.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
@@ -7,10 +7,14 @@
   
   
    <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/cbb8fa204a.js" crossorigin="anonymous"></script>
-<script type="text/javascript">
-    
-   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
+ @if(Session::has('succes_add'))
+ <script>
+   swal("Bien fait!","{!! Session::get('succes_add')!!}"),{
+  button:"OK",
+   }
+ </script>
+  @endif
 <style>
 
 h1{
@@ -27,6 +31,10 @@ border-color:#FF7F41FF;
 .btn-outline-dark{
   border-color:#DCDCDC;
   background-color:#DCDCDC;
+}
+.size{
+  font-size:16px;
+  color: #302e4d;
 }
 </style>
 
@@ -47,33 +55,27 @@ border-color:#FF7F41FF;
   
 <div class="custom-file">
     <input type="file" name="fichier"  class="custom-file-input" id="inputGroupFile03">
-    <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+    <label class="custom-file-label" for="inputGroupFile03">Choisisssez un document</label>
   </div>
 </div>
 <div class="form-group">
-<select class="form-control form-control-lg"  name="depart">
-<option selected> select departement</option>
+<select class="form-control form-control-lg size"  name="depart">
+<option class="size" selected>Sélectionnez un département</option>
   @foreach ($departement as $departe)
-<option value="{{$departe->name_departement}}">{{$departe->name_departement}}</option>
+<option class="size" value="{{$departe->name_departement}}">{{$departe->name_departement}}</option>
 @endforeach
-
 </select></div>
-
 <div class="form-group">
-<select class="form-control form-control-lg" name="type">
-<option selected> select type of file</option>
+<select class="form-control form-control-lg size" name="type">
+<option class="size" selected>Sélectionnez un type du document</option>
   @foreach ($type as $tp)
-<option value="{{$tp->type}}">{{$tp->type}}</option>
+<option class="size" value="{{$tp->type}}">{{$tp->type}}</option>
 @endforeach
-
-
-
-
 </select></div>
 <div id="text1"></div>
-<button type="submit"  class="btn btn-success">Add File</button>
+<button type="submit"  class="btn btn-success">Ajouter</button>
 
-<button type="reset" class="btn btn-outline-dark">Cancel</button>
+<button type="reset" class="btn btn-outline-dark">Annuler</button>
 </form>
 </div >
 </div >
@@ -86,5 +88,7 @@ border-color:#FF7F41FF;
    }
  </script>
   @endif
- 
-<x-footer />
+<div style="height:10px"></div>
+<x-services/>   
+
+<x-smallfooter />
