@@ -171,7 +171,7 @@ class FileController extends Controller
 
             ]);
           
-            return redirect()->back()->with('succes_update','Le document est bien modifié!!');
+            return redirect('getfileAdmin')->with('succes_update','Le document est bien modifié!!');
            }
      //********************delete document**************************************************
      function deleteDocument(Request $request,$id_document)
