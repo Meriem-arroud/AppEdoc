@@ -1,6 +1,7 @@
 
 </section>
-    <footer class="bg-dark py-4 mt-5 tf-footer">
+
+<footer class="bg-dark py-4 mt-5 tf-footer">
     <div class="container text-white">
         <div class="row">
           <div class="col-md-5">
@@ -8,17 +9,14 @@
             <p class="mb-3">smacedoc.ensah@gmail.com</p>
             <p>+212 6 12432165</p>
           </div>
-          <div class="col-md-4">
-            <div class="h6 pb-2">Suivez-Nous</div>
+          <div class="col-md-4" style="padding-top:12em" >Copyright</div>
+          <div class="col-md-3">
+          <div class="h3 pb-2">Suivez-Nous</div>
             <ul>
               <li class="mb-1"><a class="da-social-link" href="#"><i class="fab fa-twitter" aria-hidden="true"></i><span class="ml-2">Twitter</span></a></li>
               <li class="mb-1"><a class="da-social-link" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="ml-2">Facebook</span></a></li>
               <li class="mb-1"><a class="da-social-link" href="#"><i class="fab fa-instagram" aria-hidden="true"></i><span class="ml-2">Instagram</span></a></li>
-              <li class="mb-1"><a class="da-social-link" href="#"><i class="fab fa-youtube" aria-hidden="true"></i><span class="ml-2">Youtube</span></a></li>
             </ul>
-          </div>
-          <div class="col-md-3">
-            <div class="h6 pb-4">Copyright</div>
           </div>
         </div>
       </div>

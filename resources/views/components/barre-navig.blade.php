@@ -62,7 +62,7 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
       <li style="padding-right:20px" class="nav-item">
-          <a class="nav-link" href="home"> <i style="padding-right:10px" class="fas fa-home"></i>Accueil</a>
+          <a class="nav-link" href="/home"> <i style="padding-right:10px" class="fas fa-home"></i>Accueil</a>
         </li>
         <li style="padding-right:20px" class="nav-item">
           <a class="nav-link" href="#"> <i style="padding-right:10px" class="fas fa-user-tie"></i>Bonjour {{ session('user')->nom}} {{ session('user')->prenom}}</a>

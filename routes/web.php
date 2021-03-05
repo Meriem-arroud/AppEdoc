@@ -17,13 +17,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
  */
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/home', function () {
     return view('Home');
 });
-Route::view('/login', 'login');
+Route::view('/', 'login');
 Route::post('/login', [UserController::class, 'login']);
 Route::view('/loginadmin', 'loginadmin');
 Route::post('/loginadmin', [AdminController::class, 'login']);

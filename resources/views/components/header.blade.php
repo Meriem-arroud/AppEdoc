@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SMAC-e-DOC</title>
+    <link rel="shortcute icon" type="image/png" href="img/logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap" media="print" onload="this.media='all'"/>
@@ -33,10 +34,10 @@
     <header class="tf-header" data-parallax="scroll" data-image-src="images/h4.PNG">
       <nav class="navbar py-5 navbar-dark">
         <div class="container">
-          <h1><a class="navbar-brand" href="/"><img src="img/logo1.png" width="120" height="90" /></a></h1>
+          <h1><a class="navbar-brand" href="#"><img src="img/logo1.png" width="120" height="90" /></a></h1>
           <div id="navbar">
             <ul class="nav pull-right">
-            <li class="nav-item"><a class="nav-link" href="home">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="/home">Accueil</a></li>
               <li class="nav-item"><a class="nav-link" href="logout">Déconnexion</a></li>
             </ul>
           </div>
@@ -50,7 +51,7 @@
         </div>
         <div class="row">
           <div class="col-md-7 col-sm-12">
-            <p class="mt-5"><strong class="text-uppercase">Recevez et importer consulter signer en ligne tous vos documents administratifs professionnels</strong></p>
+            <p class="mt-5"><strong class="text-uppercase">Recevez importer consulter et signer en ligne tous vos documents professionnels</strong></p>
           </div>
         </div>
       </div>

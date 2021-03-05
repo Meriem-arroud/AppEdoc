@@ -101,13 +101,13 @@ class FileController extends Controller
         foreach($data as $row)
         {
             $output .= '
-            <tr>
-            <td>'.$row->name.'</td>
-            <td><img src="'.$row->type.'"width="40" height="40"></td>
-            <td>'.$row->departement.'</td>
-            <td>'.$row->date.'</td>
-            <td><a href="dar/'.$row->file.'"><img src="images/d.png" width="45" height="45"></a></td>
-            <td><a href="files/'.$row->file.'"><img src="images/c.png" width="45" height="45"></a></td>
+            <tr class="row100 body">
+            <td class="cell100 column1">'.$row->name.'</td>
+            <td class="cell100 column2"><img src="'.$row->type.'"width="40" height="40"></td>
+            <td class="cell100 column3">'.$row->departement.'</td>
+            <td class="cell100 column4">'.$row->date.'</td>
+            <td class="cell100 column5"><a href="dar/'.$row->file.'"><img src="images/d.png" width="45" height="45"></a></td>
+            <td class="cell100 column6"><a href="files/'.$row->file.'"><img src="images/c.png" width="45" height="45"></a></td>
             </tr>
             ';
         }
@@ -116,7 +116,7 @@ class FileController extends Controller
         {
         $output = '
         <tr>
-            <td align="center" colspan="7">Aucun résultat</td>
+            <td align="center" colspan="6">Aucun résultat</td>
         </tr>
         ';
         }

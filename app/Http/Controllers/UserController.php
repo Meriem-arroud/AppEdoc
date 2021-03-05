@@ -24,9 +24,7 @@ class UserController extends Controller
                 return redirect('ProfilAdmin');
 
             } else {
-
                 $req->session()->put('user', $user);
-
                 return redirect('home');}
         }}
     public static function notification_list()
