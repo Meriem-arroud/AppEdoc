@@ -87,7 +87,7 @@ class UserController extends Controller
             } else {
                 $output = '
         <tr>
-         <td align="center" style="width:619px;height:500px" colspan="8">Aucun resultat</td>
+         <td align="center" style="width:700px;height:500px" colspan="8">Aucun resultat</td>
         </tr>
         ';
             }

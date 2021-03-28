@@ -28,7 +28,7 @@
             <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
             <input type="text" name="search" id="search" class="form-control" placeholder="Chercher un employé ...." aria-label="Username" aria-describedby="addon-wrapping">
         </div>
-<table align="center" style="width:619px">
+<table align="center" style="width:700px">
 <thead>
 <tr>
 <th>ID</th>
