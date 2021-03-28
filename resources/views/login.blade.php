@@ -2,6 +2,7 @@
 <html >
 <head>
     <meta charset="utf-8">
+    <link rel="shortcute icon" type="image/png" href="img/logo.png">
     <link href="{{ asset('js/app.js') }}" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
